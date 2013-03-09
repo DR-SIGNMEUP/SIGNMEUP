@@ -1,0 +1,54 @@
+DB Schema
+
+User_Info
+	student_id PK AI
+	first_name
+	middle_name
+	last_name
+	user_email
+	alternate_email
+	address
+	degree
+	major
+	phone_no
+	password
+	gpa
+	credits_earned
+	credits_required_for_degree
+	
+
+Course_Info
+	course_id PK AI
+	course_name
+	professor_id
+	semester
+	class_location
+	class_timings
+	no_of_credits
+	
+	
+Professor_Info
+	professor_id PK AI
+	professor_name
+	phone_no
+	email_address
+	office_hours
+	subjects       ???????????
+	
+
+Student_Courses
+	student_id
+	course_id
+	semester
+	grade_type
+	grade (A, A-, B, B+, NA)
+	
+
+
+	
+	
+	
+	
+
+	
+	
