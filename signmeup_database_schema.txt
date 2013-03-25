@@ -25,7 +25,6 @@ Student_Info
 Course_Info
 	course_id PK
 	course_name
-	user_id
 	semester
 	class_location
 	class_timings
@@ -43,7 +42,7 @@ Student_Courses
 	course_id
 	semester
 	grade_type
-	grade (A, A-, B, B+, NA)
+	grade
 	
 
 
