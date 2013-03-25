@@ -1,26 +1,31 @@
 DB Schema
 
 User_Info
-	student_id PK AI
+	user_id PK AI
+	user_type [student, professor]
 	first_name
 	middle_name
 	last_name
 	user_email
 	alternate_email
 	address
-	degree
-	major
 	phone_no
 	password
+		
+
+Student_Info
+	user_id FK
+	degree [BS, MS]
+	major [CS, EE]
 	gpa
 	credits_earned
 	credits_required_for_degree
 	
 
 Course_Info
-	course_id PK AI
+	course_id PK
 	course_name
-	professor_id
+	user_id
 	semester
 	class_location
 	class_timings
@@ -28,16 +33,13 @@ Course_Info
 	
 	
 Professor_Info
-	professor_id PK AI
-	professor_name
-	phone_no
-	email_address
+	user_id FK
 	office_hours
-	subjects       ???????????
+	subject
 	
 
 Student_Courses
-	student_id
+	user_id
 	course_id
 	semester
 	grade_type
