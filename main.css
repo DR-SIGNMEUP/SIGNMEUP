@@ -1,6 +1,9 @@
+
+
 body{
     background-color:grey;
     font-size: 10pt;
+    min-height: 100%;
 }
 
 #container
@@ -38,9 +41,9 @@ body{
 {
     position:relative;
     padding:10px 0px 460px 15px;
-<!-- color:#000; -->
+/*color:#000; */
 margin: 10px 360px 10px 10px;
-<!-- //background-color:#8C898B; -->
+/* background-color:#8C898B; */
 opacity: 1;
 width:549px;
 height:470px;
@@ -60,7 +63,7 @@ height:470px;
 .wrapper{
     background:url('images/grey_overlay.png') repeat;
     width : 950px;
-    height : 550px;
+    min-height : 550px;
     margin: 10px auto;
     position : relative;
 }
@@ -71,7 +74,7 @@ height:470px;
     opacity: 0.6;
     margin: 15px;
     position: absolute;
-    height : 520px;
+    min-height : 520px;
     font-size: 16pt;
     color:black;
 }
@@ -108,7 +111,7 @@ form input[type="submit"]{
     padding:0px 15px 0px 15px;
     color:#000;
     margin: 10px 200px 0px 200px;
-<!-- background-color:#FFF; -->
+/* background-color:#FFF; */
 opacity: 0.9;
     }
 
@@ -152,4 +155,14 @@ label{
     margin-right: 0.5em;
     display: block;
     color:black;
+}
+
+
+#newFooter {
+    bottom : 5px;
+}
+
+.container1{
+    width : 1024px;
+    margin: 0 auto;
 }
