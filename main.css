@@ -1,0 +1,155 @@
+body{
+    background-color:grey;
+    font-size: 10pt;
+}
+
+#container
+{
+    background:url('images/images1.jpg') repeat;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    z-index:40;
+}
+
+.grey_box
+{
+    background:url('images/grey_overlay.png') repeat;
+    padding:10px 15px 15px 15px;
+    color:#000;
+    margin: 30px 200px 0px 200px;
+
+}
+
+.grey_box_left
+{
+    position:relative;
+    background:url('images/grey_overlay.png') repeat;
+    padding:10px 15px 10px 15px;
+    color:#000;
+    margin: 10px 200px 0px 200px;
+    opacity: 0.9;
+}
+
+.left
+{
+    position:relative;
+    padding:10px 0px 460px 15px;
+<!-- color:#000; -->
+margin: 10px 360px 10px 10px;
+<!-- //background-color:#8C898B; -->
+opacity: 1;
+width:549px;
+height:470px;
+    }
+
+
+.right
+{
+    padding:10px 0px 290px 15px;
+    color:#000;
+    margin: -470px 0px 10px 570px;
+    background-color:#8C898B;
+    opacity: 0.7;
+    font-size:20px;
+}
+
+.wrapper{
+    background:url('images/grey_overlay.png') repeat;
+    width : 950px;
+    height : 550px;
+    margin: 10px auto;
+    position : relative;
+}
+
+.leftAndRight{
+    width : 920px;
+    background-color:#8C898B;
+    opacity: 0.6;
+    margin: 15px;
+    position: absolute;
+    height : 520px;
+    font-size: 16pt;
+    color:black;
+}
+
+.leftAndRight td{
+    color: black;
+    opacity: 1;
+    font-size: 14pt;
+    padding-right : 20px;
+}
+
+.leftAndRight form input[type="text"], .leftAndRight form input[type="password"]{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+}
+
+.leftAndRight form select {
+    padding: 0;
+    height : 25px;
+    width : 250px;
+}
+
+form input[type="submit"]{
+    width : 100px;
+    height : 30px;
+    font-size: 12pt;
+}
+
+.footer
+{
+    background:url('images/grey_overlay.png') repeat;
+    position:relative;
+    padding:0px 15px 0px 15px;
+    color:#000;
+    margin: 10px 200px 0px 200px;
+<!-- background-color:#FFF; -->
+opacity: 0.9;
+    }
+
+.header_content
+{
+    width:690px;
+    float:right;
+    color:#7f7f7f;
+    font-size:11px;
+}
+
+ul {
+    padding: 10px 50px 14px 50px;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    text-decoration:none;
+    padding: 10px 15px 14px 15px;
+    color: #DEE0E4;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+
+.main_navigation
+{
+    font-weight:bold;
+    padding-top:5px;
+    padding-bottom:10px;
+    font-size:16px;
+    margin-left:60px;
+}
+
+label{
+    width: 100px;
+    float: left;
+    text-align: right;
+    margin-right: 0.5em;
+    display: block;
+    color:black;
+}
