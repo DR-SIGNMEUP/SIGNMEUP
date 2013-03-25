@@ -188,7 +188,7 @@
 			</table>
 			</form>
 		</div>
-	</div>
+	</div>	
 
     <div class="footer">
         <center>
