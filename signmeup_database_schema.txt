@@ -15,8 +15,8 @@ User_Info
 
 Student_Info
 	user_id FK
-	degree [BS, MS]
-	major [CS, EE]
+	degree
+	major
 	gpa
 	credits_earned
 	credits_required_for_degree
@@ -52,4 +52,4 @@ Student_Courses
 	
 
 	
-	
+
