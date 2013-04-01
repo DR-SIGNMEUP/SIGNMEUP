@@ -23,7 +23,7 @@ body{
     background:url('images/grey_overlay.png') repeat;
     padding:10px 15px 15px 15px;
     color:#000;
-    margin: 30px 200px 0px 200px;
+    margin: 0px 200px 0px 200px;
 
 }
 
@@ -64,7 +64,7 @@ height:470px;
     background:url('images/grey_overlay.png') repeat;
     width : 950px;
     min-height : 550px;
-    margin: 10px auto;
+    margin: 5px auto;
     position : relative;
 }
 
@@ -110,7 +110,7 @@ form input[type="submit"]{
     position:relative;
     padding:0px 15px 0px 15px;
     color:#000;
-    margin: 10px 200px 0px 200px;
+    margin: 7px 200px 0px 200px;
 /* background-color:#FFF; */
 opacity: 0.9;
     }

@@ -18,7 +18,7 @@ body{
 .header
 {
     background:url('images/grey_overlay.png') repeat;
-    padding:10px 15px 15px 15px;
+    padding:0px 15px 15px 15px;
     color:#000;
     margin-top: 30px;
 }
@@ -28,7 +28,7 @@ body{
     background:url('images/grey_overlay.png') repeat;
     width : 100%;
     min-height : 84%;
-    margin: 10px auto;
+    margin: 5px auto;
     position : relative;
 }
 

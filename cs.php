@@ -42,8 +42,8 @@ font-size:15px;
                     </a>
     </div>
 
-    <div class="wrapper" style="height:720px">
-		<div class="leftAndRight" style="height:700px">
+    <div class="wrapper">
+		<div class="leftAndRight">
 		<h1>Computer Science (CSCI) </h1>
 				<div class="flip">CSCI 101L: Fundamentals of Computer Programming
 				<a href="index.php"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" /></a>
