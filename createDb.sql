@@ -22,14 +22,12 @@ insert into User_Info (user_type, first_name, middle_name, last_name, user_email
 
 CREATE TABLE Student_Info (
                        user_id INT(10) DEFAULT NULL,
-                       degree VARCHAR(10) NOT NULL,
-                       major VARCHAR(10) NOT NULL,
+                       degree VARCHAR(70) NOT NULL,
+                       major VARCHAR(70) NOT NULL,
                        gpa DECIMAL(3,2),
                        credits_earned INT(10),
                        credits_required_for_degree INT(10),
-                       CONSTRAINT foreignkey_user_id FOREIGN KEY(user_id) REFERENCES User_Info,
-                       CONSTRAINT degreeConstraintCheck CHECK (degree IN('MS','BS')),
-					   CONSTRAINT majorConstraintCheck CHECK (major IN('CS','EE')));
+                       CONSTRAINT foreignkey_user_id FOREIGN KEY(user_id) REFERENCES User_Info);
 					   
 INSERT INTO Student_Info (user_id, degree, major, gpa, credits_earned, credits_required_for_degree) VALUES 
 (1,'MS','CS',3.5,9,27),

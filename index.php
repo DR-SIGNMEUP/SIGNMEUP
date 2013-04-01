@@ -82,7 +82,7 @@ return valid;
  ;
  </script>
 		<div class="right">
-			<form action="welcome.php" method="post" onsubmit="return validate(emailid,password)">
+			<form action="login.php" method="post" onsubmit="return validate(emailid,password)">
 			<table border="0" align="center">
 				<tr><td colspan=2 align=center style="font-size:28px;"><b>Login Information</b></td></tr>
 				<tr bordercolor=black>
@@ -107,9 +107,14 @@ return valid;
 				<TR></TR><TR></TR>
 			</table>
 			</form>
+            <div class="invalidUserNamePassword">
+                <?php if(isset($_GET['msg'])){
+                echo "Invalid username or password."."<br/> Please try again!";
+            }?>
+            </div>
 		</div>
 		
-		
+
 		</div>
 		
 		<div class="footer">

@@ -1,3 +1,26 @@
+<?php
+include("dbConnection.php");
+session_start();
+$id = $_SESSION['user_id'];
+
+$sql = "SELECT * FROM student_info WHERE user_id = '".$id."'";
+$result = mysql_query($sql);
+
+if(!$result){
+    echo 'Could not run query: ' . mysql_error();
+    exit;
+}
+else{
+    $row = mysql_fetch_assoc($result);
+    $_SESSION['gpa'] = $row['gpa'];
+    $_SESSION['degree'] = $row['degree'];
+    $_SESSION['major'] = $row['major'];
+}
+
+
+?>
+
+
 <!DOCTYPE>
 <html>
 <head>
@@ -7,62 +30,60 @@
 <body>
 <div id="containerNew" >
     <div class="header">
-        <a href="index.php" style="margin-left:0px;">
-            <img id="HeaderLogo" src="images/SMU4ColorLogo.png" alt="SignMeUp">
-        </a>
+        <?php include("header.php"); ?>
     </div>
 
     <div class="middleContainer" >
         <div class="middle student_info">
             <div class="text">
                 <?php
-                echo "<h4>Welcome User. You have been successfully logged into the system</h4>";
+                echo "<h4>Welcome ".$_SESSION['first_name']." ".$_SESSION['last_name'] ."! </h4>";
                 ?>
                 <div class="subHeading">Personal Information</div>
                 <div class="row">
                     <div class="entry">
                         <div class="key">First Name: </div>
-                        <div class="value">Kushalpreet</div>
+                        <div class="value"><?php echo $_SESSION['first_name']?></div>
                     </div>
                     <div class="entry">
                         <div class="key">Last Name: </div>
-                        <div class="value">Kaur</div>
+                        <div class="value"><?php echo $_SESSION['last_name']?></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="entry">
                         <div class="key">Degree: </div>
-                        <div class="value">Masters</div>
+                        <div class="value"><?php echo $_SESSION['degree']; ?></div>
                     </div>
                     <div class="entry">
                         <div class="key">Major: </div>
-                        <div class="value">Computer Science</div>
+                        <div class="value"><?php echo $_SESSION['major']; ?></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="entry" id="addressEntry">
                         <div class="key">Address: </div>
-                        <div class="value">123 XYZ Street, Apt #111, Los Angeles, CA 90007</div>
+                        <div class="value"><?php echo $_SESSION['address']?></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="entry">
                         <div class="key">Phone: </div>
-                        <div class="value">(111)111-1111</div>
+                        <div class="value"><?php echo $_SESSION['phone_no']?></div>
                     </div>
                     <div class="entry">
                         <div class="key">Email: </div>
-                        <div class="value">kkaur@usc.edu</div>
+                        <div class="value"><?php echo $_SESSION['user_email']?></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="entry">
                         <div class="key">Student ID: </div>
-                        <div class="value">2222222</div>
+                        <div class="value"><?php echo $_SESSION['user_id']?></div>
                     </div>
                     <div class="entry">
                         <div class="key">GPA: </div>
-                        <div class="value">3.8</div>
+                        <div class="value"><?php echo $_SESSION['gpa']; ?></div>
                     </div>
                 </div>
                     <div class="edit">
