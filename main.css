@@ -166,3 +166,21 @@ label{
     width : 1024px;
     margin: 0 auto;
 }
+
+.invalidUserNamePassword{
+    color : red;
+    font-size: 14pt;
+    width: 240px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.header_right{
+    float : right;
+    font-size: 14pt;
+    padding: 15px;
+}
+
+.header_right a{
+    margin-left : 20px;
+}

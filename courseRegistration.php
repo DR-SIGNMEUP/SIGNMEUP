@@ -1,5 +1,6 @@
 <?php
-    ?>
+    session_start();
+?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -39,9 +40,7 @@ table.tablename td
 <body>
 <div id="container">
 <div class="grey_box">
-<a href="index.php" style="margin-left:0px;">
-<img id="HeaderLogo" src="images/SMU4ColorLogo.png" alt="SignMeUp">
-</a>
+    <?php include("header.php"); ?>
 </div>
 
 <div class="wrapper" style="height:720px">
