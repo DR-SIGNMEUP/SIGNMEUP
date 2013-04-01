@@ -101,7 +101,7 @@
 
     <div class="wrapper">
 	<div class="leftAndRight">
-			<form action="welcome.php" method="post" name="SignUpForm" onsubmit="return validate()">
+			<form action="insert.php" method="post" name="SignUpForm" onsubmit="return validate()">
 			<table border="0" align="center">
 				<tr><td colspan=2 align=center style="font-size:28px;"><b>User Information</b></td></tr>
 				<tr bordercolor=black>
