@@ -35,9 +35,22 @@ if(isset($_POST['studentID']) && isset($_POST['firstname']) && isset($_POST['las
 				if(!$res){
 					echo 'Could not run query: ' . mysql_error();
 					exit;
+				} else{
+					session_start();
+					$_SESSION['user_id'] = $studentID;
+					$_SESSION['user_type'] = 'student';
+					$_SESSION['first_name'] = $firstname;
+					$_SESSION['middle_name'] = $middlename;
+					$_SESSION['last_name'] = $lastname;
+					$_SESSION['user_email'] = $email;
+					$_SESSION['alternate_email'] = $altEmail;
+					$_SESSION['address'] = $address;
+					$_SESSION['phone_no'] = $phone;
+					header ("Location: welcome.php?msg=err");
 				}
+				
         }
-			header ("Location: welcome.php?msg=err");
+			
         }
 }
 else{
