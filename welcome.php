@@ -20,55 +20,55 @@
                 echo "<h4>Welcome User. You have been successfully logged into the system</h4>";
                 ?>
 				<div id = "printableInfo">
-                <div class="subHeading">Personal Information</div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">First Name: </div>
-                        <div class="value">Kushalpreet</div>
-                    </div>
-                    <div class="entry">
-                        <div class="key">Last Name: </div>
-                        <div class="value">Kaur</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">Degree: </div>
-                        <div class="value">Masters</div>
-                    </div>
-                    <div class="entry">
-                        <div class="key">Major: </div>
-                        <div class="value">Computer Science</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="entry" id="addressEntry">
-                        <div class="key">Address: </div>
-                        <div class="value">123 XYZ Street, Apt #111, Los Angeles, CA 90007</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">Phone: </div>
-                        <div class="value">(111)111-1111</div>
-                    </div>
-                    <div class="entry">
-                        <div class="key">Email: </div>
-                        <div class="value">kkaur@usc.edu</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">Student ID: </div>
-                        <div class="value">2222222</div>
-                    </div>
-                    <div class="entry">
-                        <div class="key">GPA: </div>
-                        <div class="value">3.8</div>
-                    </div>
-                </div>
+					<div class="subHeading">Personal Information</div>
+					<div class="row">
+						<div class="entry">
+							<div class="key">First Name: </div>
+							<div class="value">Kushalpreet</div>
+						</div>
+						<div class="entry">
+							<div class="key">Last Name: </div>
+							<div class="value">Kaur</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="entry">
+							<div class="key">Degree: </div>
+							<div class="value">Masters</div>
+						</div>
+						<div class="entry">
+							<div class="key">Major: </div>
+							<div class="value">Computer Science</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="entry" id="addressEntry">
+							<div class="key">Address: </div>
+							<div class="value">123 XYZ Street, Apt #111, Los Angeles, CA 90007</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="entry">
+							<div class="key">Phone: </div>
+							<div class="value">(111)111-1111</div>
+						</div>
+						<div class="entry">
+							<div class="key">Email: </div>
+							<div class="value">kkaur@usc.edu</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="entry">
+							<div class="key">Student ID: </div>
+							<div class="value">2222222</div>
+						</div>
+						<div class="entry">
+							<div class="key">GPA: </div>
+							<div class="value">3.8</div>
+						</div>
+					</div>
 				</div>
-				<a href="index.php"><input type="image" style="float:left; height:25px" src="images/add.png" onclick = "printContent('printableInfo')"/></a>
+				<a href="index.php"><input type="image" style="float:left; height:30px" src="images/print.png" onclick = "printContent('printableInfo','main2.css')"/></a>
                     <div class="edit">
                         <a href="editInfo.php">To change personal information please click here</a>
                     </div>
