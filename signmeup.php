@@ -2,7 +2,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="main.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
+
+    $(document).ready(function(){
+        $('#submit').click(function(e){
+            if(validate()){
+                var sign_up= confirm("Are you sure you want to submit the details. You will not be able to change information after this");
+                if(!sign_up){
+                    e.preventDefault();
+                }
+                else{
+                    $("#signupForm").submit();
+                }
+            }
+
+        });
+    });
+
         function validate(){
             var fields = document.SignUpForm;
 
@@ -101,7 +118,7 @@
 
     <div class="wrapper">
 	<div class="leftAndRight">
-			<form action="insert.php" method="post" name="SignUpForm" onsubmit="return validate()">
+			<form action="insert.php" method="post" name="SignUpForm" id="signupForm" onsubmit="return validate()">
 			<table border="0" align="center">
 				<tr><td colspan=2 align=center style="font-size:28px;"><b>User Information</b></td></tr>
 				<tr bordercolor=black>
