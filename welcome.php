@@ -89,7 +89,7 @@ else{
                     </div>
                 </div>
 				</div>
-				<a href="index.php"><input type="image" style="float:left; height:25px" src="images/add.png" onclick = "printContent('printableInfo')"/></a>
+				<a href="index.php"><input type="image" style="float:left; height:30px" src="images/print.png" onclick = "printContent('printableInfo','main2.css')"/></a>
                     <div class="edit">
                         <a href="editInfo.php">To change personal information please click here</a>
                     </div>
