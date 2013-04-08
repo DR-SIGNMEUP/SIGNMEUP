@@ -2,7 +2,76 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="main.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <style>
+        .ui-tooltip, .arrow:after {
+            background: black;
+            border: 2px solid white;
+
+        }
+        .ui-tooltip {
+            padding: 10px 20px;
+            color: white;
+            border-radius: 20px;
+            font: bold 14px "Helvetica Neue", Sans-Serif;
+            text-transform: uppercase;
+            box-shadow: 0 0 7px black;
+        }
+        .arrow {
+            width: 70px;
+            height: 16px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            bottom: -16px;
+        }
+        .arrow.top {
+            top: -16px;
+            bottom: auto;
+        }
+        .arrow.left {
+            left: 20%;
+        }
+        .arrow:after {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: -20px;
+            width: 25px;
+            height: 25px;
+            box-shadow: 6px 5px 9px -9px black;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            tranform: rotate(45deg);
+        }
+        .arrow.top:after {
+            bottom: -20px;
+            top: auto;
+        }
+    </style>
+<script src="jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script>
+        $(document).ready(function(){
+            $( document ).tooltip({
+                position: {
+                    my: "center bottom-10",
+                    at: "center top",
+                    using: function( position, feedback ) {
+                        $( this ).css( position );
+                        $( "<div>" )
+                            .addClass( "arrow" )
+                            .addClass( feedback.vertical )
+                            .addClass( feedback.horizontal )
+                            .appendTo( this );
+                    }
+                }
+            });
+        });
+</script>
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -15,6 +84,9 @@
                 else{
                     $("#signupForm").submit();
                 }
+            }
+            else{
+                e.preventDefault();
             }
 
         });
@@ -118,48 +190,48 @@
 
     <div class="wrapper">
 	<div class="leftAndRight">
-			<form action="insert.php" method="post" name="SignUpForm" id="signupForm" onsubmit="return validate()">
+			<form action="insert.php" method="post" name="SignUpForm" id="signupForm" >
 			<table border="0" align="center">
 				<tr><td colspan=2 align=center style="font-size:28px;"><b>User Information</b></td></tr>
 				<tr bordercolor=black>
 				<td>Student ID*: </td>
-				<td><input type="text" name="studentID"></td>
+				<td><input type="text" name="studentID" title="Please enter your unique student id"></td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>First Name*:</td>
-				<td><input type="text" name="firstname">     </td>
+				<td><input type="text" name="firstname" title="Enter your First name">     </td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Middle Name:</td>
-				<td><input type="text" name="middlename">     </td>
+				<td><input type="text" name="middlename" title="Enter your middle name">     </td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Last Name*:</td>
-				<td><input type="text" name="lastname">     </td>
+				<td><input type="text" name="lastname" title="Enter your last name">     </td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Email*:</td>
-				<td><input type="text" name="email">     </td>
+				<td><input type="text" name="email" title="Enter your email adddress">     </td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Alternate Email:</td>
-				<td><input type="text" name="altEmail">     </td>
+				<td><input type="text" name="altEmail" title="Enter your alternate email address">     </td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Address*:</td>
-				<td><input type="text" name="address">     </td>
+				<td><input type="text" name="address" title="Enter your address">     </td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Degree*:</td>
 				<td><p>
-				<select name="degree">
+				<select name="degree" title="Please select your degree objective">
 				  <option value="">Select...</option>
 				  <option value="BS">Bachelor's</option>
 				  <option value="MS">Master's</option>
@@ -171,7 +243,7 @@
 				<tr bordercolor=black>
 				<td>Major*:</td>
 				<td><p>
-				<select name="major">
+				<select name="major" title="Please select your major">
 				  <option value="">Select...</option>
 				  <option value="CS">Computer Science</option>
 				  <option value="EE">Electrical Engineering</option>
@@ -184,17 +256,17 @@
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Phone Number:</td>
-				<td><input type="text" name="phone">     </td>
+				<td><input type="text" name="phone" title="Enter your phone number XXX-XXX-XXXX">     </td>
 				</tr>
 				<TR></TR><TR></TR>
 				<tr bordercolor=black>
 				<td>Password*:</td>
-				<td><input type="PASSWORD" name="password">     </td>
+				<td><input type="PASSWORD" name="password" title="Enter your password. Atleast 6 characters in length">     </td>
 				</tr>
 				<TR></TR><TR></TR>
                 <tr bordercolor=black>
                     <td>Confirm Password*:</td>
-                    <td><input type="PASSWORD" name="confirmpassword">     </td>
+                    <td><input type="PASSWORD" name="confirmpassword" title="Please confirm your password">     </td>
                 </tr>
                 <TR></TR><TR></TR>
 				<tr bordercolor=black>

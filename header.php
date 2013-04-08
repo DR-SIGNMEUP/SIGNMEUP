@@ -1,11 +1,12 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="jquery-1.7.1.min.js"></script>
 <script>
     $(document).ready(function(){
-       $('#logout').click(function(){
+       $('#logout').click(function(e){
            var log_out= confirm("Are you sure you want to log out?");
            if(log_out){
                window.location.href = "logout.php";
            }
+           e.preventDefault();
         });
     });
 </script>
