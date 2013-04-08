@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="main2.css">
+	<script src="print.js"></script>
 </head>
 
 <body>
@@ -18,6 +19,7 @@
                 <?php
                 echo "<h4>Welcome User. You have been successfully logged into the system</h4>";
                 ?>
+				<div id = "printableInfo">
                 <div class="subHeading">Personal Information</div>
                 <div class="row">
                     <div class="entry">
@@ -65,11 +67,13 @@
                         <div class="value">3.8</div>
                     </div>
                 </div>
+				</div>
+				<a href="index.php"><input type="image" style="float:left; height:25px" src="images/add.png" onclick = "printContent('printableInfo')"/></a>
                     <div class="edit">
                         <a href="editInfo.php">To change personal information please click here</a>
                     </div>
                 </div>
-
+				
 
         </div>
         <div class="tabbedPages">
