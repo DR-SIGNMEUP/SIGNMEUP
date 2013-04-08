@@ -8,7 +8,14 @@ session_start();
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
 </script>
+<script>
+function aa(u)
+{
+    var ddd=u;
+    window.location.href="welcome.php?Result=" +ddd;
+}
 
+</script>
 <script> 
 $(document).ready(function(){
   $(".flip").click(function(){
@@ -47,7 +54,7 @@ font-size:15px;
 		<div class="leftAndRight">
 		<h1>Computer Science (CSCI) </h1>
 				<div class="flip">CSCI 101L: Fundamentals of Computer Programming
-				<a href="index.php"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" /></a>
+				<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('CSCI 101L')"/></a>
 				</div>
 				<div class="panel">
 					<table class="tablename" border="1">
@@ -90,7 +97,7 @@ font-size:15px;
 				</div>
 				
 				<div class="flip">CSCI 200L: Object Oriented Programming
-				<a href="index.php"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" /></a>
+				<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('CSCI 200L')"/></a>
 				</div>
 				<div class="panel">
 					<table class="tablename" border="1">
@@ -122,7 +129,7 @@ font-size:15px;
 				</div>
 				
 				<div class="flip">CSCI 357: Basic Organisation of Computer Systems
-				<a href="index.php"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" /></a>
+				<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('CSCI 357')"/></a>
 				</div>
 				<div class="panel">
 					<table class="tablename" border="1">
@@ -167,7 +174,7 @@ font-size:15px;
 				</div>
 				
 				<div class="flip">CSCI 402: Operating Systems
-				<a href="index.php"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" /></a>
+				<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('CSCI 402')"/></a>
 				</div>
 				<div class="panel">
 					<table  class="tablename" border="1">
@@ -200,7 +207,7 @@ font-size:15px;
 				</div>
 				
 				<div class="flip">CSCI 570: Analysis of Algorithms
-				<a href="index.php"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" /></a>
+				<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('CSCI 570')"/></a>
 				</div>
 				<div class="panel">
 					<table class="tablename" border="1">
@@ -245,7 +252,7 @@ font-size:15px;
 				</div>
 				
 				<div class="flip">CSCI 673: Structure and Dynamics of Networked Information
-				<a href="index.php"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" /></a>
+				<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('CSCI 673')"/></a>
 				</div>
 				<div class="panel">
 

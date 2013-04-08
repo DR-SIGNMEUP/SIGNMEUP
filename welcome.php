@@ -2,7 +2,19 @@
 include("dbConnection.php");
 session_start();
 $id = $_SESSION['user_id'];
+if(!empty($_GET))
+{
+	extract($_GET);
+	//echo $Result;
+	$sql = "INSERT INTO student_courses (user_id,course_id) VALUES
+			 ('".$id."','".$Result."')";
+	$result = mysql_query($sql);
 
+	if(!$result){
+		echo 'Could not run query: ' . mysql_error();
+		exit;
+	}
+}
 $sql = "SELECT * FROM student_info WHERE user_id = '".$id."'";
 $result = mysql_query($sql);
 
@@ -89,7 +101,7 @@ else{
                     </div>
                 </div>
 				</div>
-				<a href="index.php"><input type="image" style="float:left; height:25px" src="images/add.png" onclick = "printContent('printableInfo')"/></a>
+				<a href="index.php"><input type="image" style="float:left; height:30px" src="images/print.png" onclick = "printContent('printableInfo','main2.css')"/></a>
                     <div class="edit">
                         <a href="editInfo.php">To change personal information please click here</a>
                     </div>

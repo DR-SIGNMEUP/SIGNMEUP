@@ -27,8 +27,11 @@ if(isset($_POST['emailid']) && isset($_POST['password'])) {
                 $_SESSION['alternate_email'] = $row['alternate_email'];
                 $_SESSION['address'] = $row['address'];
                 $_SESSION['phone_no'] = $row['phone_no'];
-
-                header ("Location: welcome.php");
+				
+				if($email == "admin@usc.edu" && $password == "admin")
+					header("Location: admin.php");
+				else
+					header ("Location: welcome.php");
             }
             else{
                 header ("Location: index.php?msg=err");
