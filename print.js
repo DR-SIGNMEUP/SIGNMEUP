@@ -1,4 +1,3 @@
-
 function printContent(id,css){
 	str=document.getElementById(id).innerHTML
 	newwin=window.open('','printwin','left=100,top=100,width=400,height=400')
