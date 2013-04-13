@@ -1,3 +1,5 @@
+<?php define("CURRENT_SEM", "Spring 2013");
+?>
 <script src="jquery-1.7.1.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -11,11 +13,25 @@
     });
 </script>
 
-<a href=<?php if(!empty($_SESSION['user_id'])) echo "welcome.php"; else echo "index.php"; ?> style="margin-left:0px;">
+<a href=<?php
+
+        if(!empty($_SESSION['user_type'])){
+              if($_SESSION['user_type'] == "professor"){
+                  echo "welcomeFaculty.php";
+              }
+              else{
+                  echo "welcome.php";
+              }
+        }
+        else{
+              echo "index.php";
+        }
+        ?> style="margin-left:0px;">
     <img id="HeaderLogo" src="images/SMU4ColorLogo.png" alt="SignMeUp">
 </a>
 <?php if(!empty($_SESSION['user_id'])){ ?>
     <span class="header_right">
+            <span style="margin-right: 20px"><?php echo CURRENT_SEM; ?></span>
             <span class="user_id">
                 SignMeUp ID : <?php echo $_SESSION['user_id']; ?>
             </span>

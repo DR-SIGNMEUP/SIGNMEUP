@@ -28,8 +28,10 @@ if(isset($_POST['emailid']) && isset($_POST['password'])) {
                 $_SESSION['address'] = $row['address'];
                 $_SESSION['phone_no'] = $row['phone_no'];
 				
-				if($email == "admin@usc.edu" && $password == "admin")
+				if($row['user_type'] == "admin")
 					header("Location: admin.php");
+                else if($row['user_type'] == "professor")
+                    header ("Location: welcomeFaculty.php");
 				else
 					header ("Location: welcome.php");
             }

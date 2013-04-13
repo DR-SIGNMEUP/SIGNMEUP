@@ -148,3 +148,16 @@ body{
 .header_right a{
     margin-left : 20px;
 }
+
+#facultyText{
+ height: 350px;
+}
+
+#facultyTabbedPages{
+    top : 380px;
+    height : 155px;
+}
+
+#facultyMiddleContainer{
+    min-height : 87%;
+}

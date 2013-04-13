@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 30, 2013 at 12:15 AM
--- Server version: 5.1.41
--- PHP Version: 5.3.1
+-- Host: 127.0.0.1
+-- Generation Time: Apr 13, 2013 at 10:06 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -51,8 +52,10 @@ INSERT INTO `course_info` (`course_id`, `course_name`, `semester`, `class_locati
 
 CREATE TABLE IF NOT EXISTS `professor_info` (
   `user_id` int(10) DEFAULT NULL,
+  `office_location` varchar(100) DEFAULT NULL,
   `office_hours` varchar(50) DEFAULT NULL,
   `subject` varchar(50) NOT NULL,
+  `course_id` varchar(50) NOT NULL,
   KEY `foreignkey_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -60,9 +63,9 @@ CREATE TABLE IF NOT EXISTS `professor_info` (
 -- Dumping data for table `professor_info`
 --
 
-INSERT INTO `professor_info` (`user_id`, `office_hours`, `subject`) VALUES
-(4, '9.30AM - 10.45AM', 'Introduction to Computer Networks'),
-(5, '11.30AM - 12.45PM', 'Operating Systems');
+INSERT INTO `professor_info` (`user_id`, `office_location`, `office_hours`, `subject`, `course_id`) VALUES
+(6, 'ABC Building Room 101', 'T,Th: 9.30AM - 10.45AM', 'Introduction to Computer Networks', 'EE450'),
+(5, 'XYZ Building Room 202', 'M,W: 11.30AM - 12.45PM', 'Operating Systems', 'CS402');
 
 -- --------------------------------------------------------
 
@@ -86,7 +89,11 @@ CREATE TABLE IF NOT EXISTS `student_courses` (
 
 INSERT INTO `student_courses` (`user_id`, `course_id`, `semester`, `grade_type`, `grade`) VALUES
 (1, 'CS402', 'SPRING 201', 'letter grade', 'A-'),
-(2, 'EE450', 'SPRING 201', 'letter grade', 'B+');
+(2, 'EE450', 'SPRING 201', 'letter grade', 'B+'),
+(44, '', '', NULL, NULL),
+(44, '', '', NULL, NULL),
+(44, 'CSCI 101L', '', NULL, NULL),
+(44, 'CSCI 570', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -109,9 +116,10 @@ CREATE TABLE IF NOT EXISTS `student_info` (
 --
 
 INSERT INTO `student_info` (`user_id`, `degree`, `major`, `gpa`, `credits_earned`, `credits_required_for_degree`) VALUES
-(1, 'MS', 'CS', '3.50', 9, 27),
-(2, 'MS', 'EE', '3.20', 8, 27),
-(3, 'BS', 'CS', '3.60', 20, 52);
+(1, 'MS', 'CS', 3.50, 9, 27),
+(2, 'MS', 'EE', 3.20, 8, 27),
+(3, 'BS', 'CS', 3.60, 20, 52),
+(44, 'MS', 'CS', 0.00, 0, 27);
 
 -- --------------------------------------------------------
 
@@ -131,18 +139,20 @@ CREATE TABLE IF NOT EXISTS `user_info` (
   `phone_no` varchar(15) NOT NULL,
   `password` varchar(70) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `user_info`
 --
 
 INSERT INTO `user_info` (`user_id`, `user_type`, `first_name`, `middle_name`, `last_name`, `user_email`, `alternate_email`, `address`, `phone_no`, `password`) VALUES
-(1, 'student', 'Abhinav', '', 'Mishra', 'abhi@usc.edu', 'abhi@yahoo.com', '1756 Scott St, LAKE CITY,FL 32056 ', '2132132132', 'abhinav'),
-(2, 'student', 'Abhishek', 'Ratan', 'Tiwari', 'shek@usc.edu', 'abhishk@gmail.com', ' 1549 Alameda Ave, Adak,AK 99546 ', '3123123123', 'abhishek'),
-(3, 'student', 'Aldrich', '', 'Stibel', 'ald@usc.edu', 'ald@gmail.com', ' 736 Bush St,VERNON HILLS,IL 60061 ', '3233233232', 'aldrich'),
-(4, 'professor', 'Dennis', 'John', 'Lillee', 'dennis@usc.edu', 'dennis@yahoo.com', ' 70 Golden Gate Ave, SAN FRANCISCO, CA 94102 ', '4124124124', 'dennis'),
-(5, 'professor', 'Davy', '', 'Hudson', 'davy@usc.edu', '', ' 1426 Guerrero St, NEW YORK ,NY 10010 ', '8128128123', 'davy');
+(1, 'admin', 'Admin', '', 'USC', 'admin@usc.edu', '', 'Student Union, USC', '1233214123', 'admin'),
+(2, 'student', 'Abhinav', '', 'Mishra', 'abhi@usc.edu', 'abhi@yahoo.com', '1756 Scott St, LAKE CITY,FL 32056 ', '2132132132', 'abhinav'),
+(3, 'student', 'Abhishek', 'Ratan', 'Tiwari', 'shek@usc.edu', 'abhishk@gmail.com', ' 1549 Alameda Ave, Adak,AK 99546 ', '3123123123', 'abhishek'),
+(4, 'student', 'Aldrich', '', 'Stibel', 'ald@usc.edu', 'ald@gmail.com', ' 736 Bush St,VERNON HILLS,IL 60061 ', '3233233232', 'aldrich'),
+(5, 'professor', 'Dennis', 'John', 'Lillee', 'dennis@usc.edu', 'dennis@yahoo.com', ' 70 Golden Gate Ave, SAN FRANCISCO, CA 94102 ', '4124124124', 'dennis'),
+(6, 'professor', 'Davy', '', 'Hudson', 'davy@usc.edu', '', ' 1426 Guerrero St, NEW YORK ,NY 10010 ', '8128128123', 'davy'),
+(44, 'student', 'Yumin', '', 'Gong', 'yumin@usc.edu', '', '56th test street', '111-111-1111', '111111');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
