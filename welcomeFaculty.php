@@ -3,7 +3,7 @@ include("dbConnection.php");
 session_start();
 $id = $_SESSION['user_id'];
 
-$sql = "SELECT * FROM professor_info WHERE user_id = '".$id."'";
+$sql = "SELECT * FROM professor_info pi, course_info ci WHERE pi.user_id = '".$id."' and pi.course_id = ci.course_id";
 $result = mysql_query($sql);
 
 if(!$result){
@@ -15,9 +15,10 @@ else{
     $_SESSION['office_hours'] = $row['office_hours'];
     $_SESSION['office_location'] = $row['office_location'];
     $_SESSION['subject'] = $row['subject'];
-    $_SESSION['course_id'] = $row['course_id'];
+    $_SESSION['course_id'] = $courseid = $row['course_id'];
+    $_SESSION['class_location'] = $row['class_location'];
+    $_SESSION['class_hours'] = $row['class_timings'];
 }
-
 
 ?>
 
@@ -92,11 +93,11 @@ else{
                 <div class="row">
                     <div class="entry">
                         <div class="key">Class Location: </div>
-                        <div class="value"><?php echo $_SESSION['office_location']?></div>
+                        <div class="value"><?php echo $_SESSION['class_location']?></div>
                     </div>
                     <div class="entry">
                         <div class="key">Class Hours: </div>
-                        <div class="value"><?php echo $_SESSION['office_hours']; ?></div>
+                        <div class="value"><?php echo $_SESSION['class_hours']; ?></div>
                     </div>
                 </div>
 				</div>
@@ -105,9 +106,8 @@ else{
                         <a href="editInfo.php">To change personal information please click here</a>
                     </div>
                 </div>
-				
-
         </div>
+
         <div class="tabbedPages" id="facultyTabbedPages">
             <div class="text">
                 <h4>Useful Links</h4>
@@ -115,8 +115,8 @@ else{
 
             <div class="tabs">
                 <ul id="menu">
-                    <li><a class="selected" href="studentsEnrolled.php">View Students Enrolled</a></li>
-                    <li><a href="addStudents.php">Add Student</a></li>
+                    <li><a class="selected" href="studentsEnrolled.php?facultyid=<?php echo $id;?>&courseid=<?php echo $courseid; ?>">View Students Enrolled</a></li>
+                    <li><a href="addStudent.php?facultyid=<?php echo $id;?>&courseid=<?php echo $courseid; ?>">Add Student</a></li>
                     <li><a href="facultyInfo.php">View Faculty Information</a></li>
                 </ul>
             </div>

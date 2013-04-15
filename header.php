@@ -1,5 +1,4 @@
-<?php define("CURRENT_SEM", "Spring 2013");
-?>
+
 <script src="jquery-1.7.1.min.js"></script>
 <script>
     $(document).ready(function(){

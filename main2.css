@@ -27,7 +27,7 @@ body{
 .middleContainer{
     background:url('images/grey_overlay.png') repeat;
     width : 100%;
-    min-height : 84%;
+    height : 538px;
     margin: 5px auto;
     position : relative;
 }
@@ -159,5 +159,80 @@ body{
 }
 
 #facultyMiddleContainer{
-    min-height : 87%;
+    height : 564px;
+}
+
+#facultyMiddleContainer2{
+    height : 526px;
+}
+
+.add_student_wrapper{
+    height: 497px;
+}
+
+.list_of_students, .add_student{
+    padding-left: 15px;
+    min-height: 507px;
+}
+
+.mytable {
+    width : 890px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.mytable .mytable_header{
+    font-weight: 600;
+}
+
+.mytable .myrow{
+    width : 890px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    height : 40px;
+}
+
+.mytable .col1, .col3{
+    width : 195px;
+    float : left;
+    height : 40px;
+    line-height: 40px;
+}
+
+.mytable .col1{
+    width : 130px;
+}
+
+.mytable .col2{
+    width : 500px;
+    float : left;
+    height : 40px;
+    line-height: 40px;
+}
+
+label{
+    width: 100px;
+    display: block;
+    float: left;
+    height : 30px;
+    line-height: 30px;
+    font-size: 14pt;
+}
+
+form{
+    margin: 0 auto;
+    width : 400px;
+}
+form input[type="submit"]{
+    width : 100px;
+    height : 30px;
+    font-size: 12pt;
+    margin-left: 97px;
+}
+
+form input[type="text"]{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+
 }
