@@ -18,6 +18,9 @@
               if($_SESSION['user_type'] == "professor"){
                   echo "welcomeFaculty.php";
               }
+			  else if($_SESSION['user_type']=="admin"){
+					echo "admin.php";
+				}
               else{
                   echo "welcome.php";
               }

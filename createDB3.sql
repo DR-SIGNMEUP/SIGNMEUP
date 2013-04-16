@@ -151,11 +151,11 @@ CREATE TABLE IF NOT EXISTS `user_info` (
 
 INSERT INTO `user_info` (`user_id`, `user_type`, `first_name`, `middle_name`, `last_name`, `user_email`, `alternate_email`, `address`, `phone_no`, `password`) VALUES
 (1, 'admin', 'Admin', '', 'USC', 'admin@usc.edu', '', 'Student Union, USC', '1233214123', 'admin'),
-(2, 'student', 'Abhinav', '', 'Mishra', 'abhi@usc.edu', 'abhi@yahoo.com', '1756 Scott St, LAKE CITY,FL 32056 ', '2132132132', 'abhinav'),
-(3, 'student', 'Abhishek', 'Ratan', 'Tiwari', 'shek@usc.edu', 'abhishk@gmail.com', ' 1549 Alameda Ave, Adak,AK 99546 ', '3123123123', 'abhishek'),
-(4, 'student', 'Aldrich', '', 'Stibel', 'ald@usc.edu', 'ald@gmail.com', ' 736 Bush St,VERNON HILLS,IL 60061 ', '3233233232', 'aldrich'),
-(5, 'professor', 'Dennis', 'John', 'Lillee', 'dennis@usc.edu', 'dennis@yahoo.com', ' 70 Golden Gate Ave, SAN FRANCISCO, CA 94102 ', '4124124124', 'dennis'),
-(6, 'professor', 'Davy', '', 'Hudson', 'davy@usc.edu', '', ' 1426 Guerrero St, NEW YORK ,NY 10010 ', '8128128123', 'davy'),
+(2, 'student', 'Abhinav', '', 'Mishra', 'abhi@usc.edu', 'abhi@yahoo.com', '1756 Scott St, LAKE CITY,FL 32056', '2132132132', 'abhinav'),
+(3, 'student', 'Abhishek', 'Ratan', 'Tiwari', 'shek@usc.edu', 'abhishk@gmail.com', ' 1549 Alameda Ave, Adak,AK 99546', '3123123123', 'abhishek'),
+(4, 'student', 'Aldrich', '', 'Stibel', 'ald@usc.edu', 'ald@gmail.com', ' 736 Bush St,VERNON HILLS,IL 60061', '3233233232', 'aldrich'),
+(5, 'professor', 'Dennis', 'John', 'Lillee', 'dennis@usc.edu', 'dennis@yahoo.com', ' 70 Golden Gate Ave, SAN FRANCISCO, CA 94102', '4124124124', 'dennis'),
+(6, 'professor', 'Davy', '', 'Hudson', 'davy@usc.edu', '', ' 1426 Guerrero St, NEW YORK ,NY 10010', '8128128123', 'davy'),
 (44, 'student', 'Yumin', '', 'Gong', 'yumin@usc.edu', '', '56th test street', '111-111-1111', '111111');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
