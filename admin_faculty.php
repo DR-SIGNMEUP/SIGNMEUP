@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,9 +54,8 @@ font-size:15px;
 		<h1>List of professors:</h1>
 		<?php
 			include("dbConnection.php");
-			session_start();
 			
-			$sql = "SELECT * FROM user_info WHERE user_type='professor'";
+			$sql = "SELECT * FROM user_info as a join professor_info as b on a.user_id=b.user_id WHERE user_type='professor'";
 			$result = mysql_query($sql);
 
 			if(!$result){
@@ -78,7 +78,13 @@ font-size:15px;
 					echo "<td>Phone No: ".$row['phone_no']."</td>";
 					echo "</tr>";
 					echo "<tr>"; 
-					echo "<td>Address: ".$row['address']."</td>";
+					echo "<td>Office Location: ".$row['office_location']."</td>";
+					echo "</tr>";
+					echo "<tr>"; 
+					echo "<td>Office Hours: ".$row['office_hours']."</td>";
+					echo "</tr>";
+					echo "<tr>"; 
+					echo "<td>Subject: ".$row['subject']."</td>";
 					echo "</tr>";
 					echo "</table>";
 					echo "</div>";
