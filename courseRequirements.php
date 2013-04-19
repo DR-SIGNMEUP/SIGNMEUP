@@ -52,16 +52,16 @@ table.tablename td
 <a href="index.php"></a>
 </div>
 <div class="panel">
-<li><a>CSCI 101L: Fundamentals of Computer Programming</a></li>
-<li><a>CSCI 357: Basic Organisation of Computer Systems</a></li>
+<li><a>CS101: Fundamentals of Computer Programming</a></li>
+<li><a>CSCI 382: Operating Systems</a></li>
 </div>
 
 <div class="flip">Electrical Engineering
 <a href="index.php"></a>
 </div>
 <div class="panel">
-<li><a>EE 201: Introduction to Probability</a></li>
-<li><a>EE 430: Introduction to Digital Logic</a></li>
+<li><a>EE265: Introduction to Digital Logic</a></li>
+<li><a>EE467: Introduction to Computer Networks</a></li>
 </div>
 
 
@@ -69,17 +69,8 @@ table.tablename td
 <a href="index.php"></a>
 </div>
 <div class="panel">
-<li><a>BME 248: Introduction to Artificial Intelligence</a></li>
-<li><a>BME 315: Signals and Systems Analysis</a></li>
-</div>
-
-
-<div class="flip">Environmental Engineering
-<a href="index.php"></a>
-</div>
-<div class="panel">
-<li><a>ENE 106: Air pollution Fundamentals</a></li>
-<li><a>ENE 403: Microbiology for Environmental Engineers</a></li>
+<li><a>BME101: Biomedical Programming</a></li>
+<li><a>BME382: Signals and Systems Analysis</a></li>
 </div>
 
 <h2>One course from the following bucket: </h2>
@@ -88,16 +79,16 @@ table.tablename td
 <a href="index.php"></a>
 </div>
 <div class="panel">
-<li><a>CSCI 402: Operating Systems</a></li>
-<li><a>CSCI 470: Data Structures</a></li>
+<li><a>CS467: Artificial Intelligence</a></li>
+<li><a>CS503: Analysis of Algorithms</a></li>
 </div>
 
 <div class="flip">Electrical Engineering
 <a href="index.php"></a>
 </div>
 <div class="panel">
-<li><a>EE 441: Applied Linear Algebra for Engineering</a></li>
-<li><a>EE 457: Computer Systems Organization</a></li>
+<li><a>EE382: Linear Algebra</a></li>
+<li><a>EE503: VLSI Design</a></li>
 </div>
 
 
@@ -105,18 +96,10 @@ table.tablename td
 <a href="index.php"></a>
 </div>
 <div class="panel">
-<li><a>BME 423: Statistical Methods in Biomedical Engineering</a></li>
-<li><a>BME 452: Introduction to Neural Engineering</a></li>
+<li><a>BME265: Medical Electronics</a></li>
+<li><a>BME467: Biomedical Imaging</a></li>
 </div>
 
-
-<div class="flip">Environmental Engineering
-<a href="index.php"></a>
-</div>
-<div class="panel">
-<li><a>ENE 505: Energy and the Environment</a></li>
-<li><a>ENE 429: Air pollution control</a></li>
-</div>
 </div>
 </div>
 </div>
