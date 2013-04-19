@@ -41,8 +41,21 @@ CREATE TABLE IF NOT EXISTS `course_info` (
 --
 
 INSERT INTO `course_info` (`course_id`, `course_name`, `semester`, `class_location`, `class_timings`, `no_of_credits`) VALUES
-('EE450', 'Introduction to Computer Networks', 'SPRING 201', 'OHE 102', 'T, Th: 7.30AM - 8.45AM', 3),
-('CS402', 'Operating Systems', 'SPRING 201', 'OHE 301', 'M, W: 9.30AM - 10.45AM', 3);
+('EE101', 'Computer Organization and Architecture', 'SPRING 201', 'OHE 102', 'T, Th: 7.30AM - 8.45AM', 3),
+('EE265', 'Introduction to Digital Logic', 'SPRING 201', 'OHE 166', 'T, F: 9.30AM - 10.45AM', 3),
+('EE382', 'Linear Algebra', 'SPRING 201', 'SAL 344', 'W, Th: 12.30PM - 1.45PM', 3),
+('EE467', 'Introduction to Computer Networks', 'SPRING 201', 'NOH 101', 'M, Th: 8.30AM - 9.45AM', 3),
+('EE503', 'VLSI Design', 'SPRING 201', 'PHU 607', 'T, W: 10.30AM - 11.45AM', 3),
+('CS101', 'Fundamentals of Computer Programming', 'SPRING 201', 'KLI 665', 'W, Th: 11.30AM - 12.45PM', 3),
+('CS265', 'Object Oriented Programming', 'SPRING 201', 'VJN 222', 'T, F: 9.30AM - 10.45AM', 3),
+('CS382', 'Operating Systems', 'SPRING 201', 'NOH 667', 'T, W: 7.30AM - 8.45AM', 3),
+('CS467', 'Artificial Intelligence', 'SPRING 201', 'VKC 503', 'T, Th: 5.30PM - 7.45PM', 3),
+('CS503', 'Analysis of Algorithms', 'SPRING 201', 'TTY 223', 'M, F: 3.30PM - 5.45PM', 3),
+('BME101', 'Biomedical Programming', 'SPRING 201', 'YTH 423', 'M, T: 7.30AM - 8.45AM', 3),
+('BME265', 'Medical Electronics', 'SPRING 201', 'DEX 223', 'W, Th: 9.30AM - 10.45AM', 3),
+('BME382', 'Signals and Systems', 'SPRING 201', 'DEX 578', 'T, Th: 4.30PM - 6.45PM', 3),
+('BME467', 'Biomedical Imaging', 'SPRING 201', 'VKC 405', 'T, F: 7.30AM - 8.45AM', 3),
+('BME503', 'Neuroengineering', 'SPRING 201', 'OHE 301', 'M, W: 9.30AM - 10.45AM', 3);
 
 -- --------------------------------------------------------
 
@@ -64,8 +77,21 @@ CREATE TABLE IF NOT EXISTS `professor_info` (
 --
 
 INSERT INTO `professor_info` (`user_id`, `office_location`, `office_hours`, `subject`, `course_id`) VALUES
-(6, 'ABC Building Room 101', 'T, Th: 9.30AM - 10.45AM', 'Introduction to Computer Networks', 'EE450'),
-(5, 'XYZ Building Room 202', 'M, W: 11.30AM - 12.45PM', 'Operating Systems', 'CS402');
+(6, 'ABC Building Room 101', 'T, Th: 9.30AM - 10.45AM', 'Computer Organization and Architecture', 'EE101'),
+(6, 'ABC Building Room 101', 'T, Th: 9.30AM - 10.45AM', 'Introduction to Digital Logic', 'EE265'),
+(7, 'CGH Building Room 444', 'Th, M: 5.30PM - 7.30PM', 'VLSI Design', 'EE503'),
+(8, 'RRT Building Room 221', 'F, F: 3.30PM - 5.30PM', 'Fundamentals of Computer Programming', 'CS101'),
+(8, 'RRT Building Room 221', 'F, F: 3.30PM - 5.30PM', 'Object Oriented Programming', 'CS265'),
+(9, 'OPH Building Room 609', 'M, M: 4.30PM - 6.30PM', 'Operating Systems', 'CS382'),
+(9, 'OPH Building Room 609', 'M, M: 4.30PM - 6.30PM', 'Artificial Intelligence', 'CS467'),
+(10, 'FTY Building Room 134', 'W, W: 1.30PM - 3.30PM', 'Analysis of Algorithms', 'CS503'),
+(11, 'ETR Building Room 455', 'Th, Th: 11.30AM - 1.30PM', 'Biomedical Programming', 'BME101'),
+(11, 'ETR Building Room 455', 'Th, Th: 11.30AM - 1.30PM', 'Medical Electronics', 'BME265'),
+(12, 'MNJ Building Room 101', 'T, T: 9.30AM - 11.30AM', 'Signals and Systems', 'BME382'),
+(12, 'MNJ Building Room 101', 'T, T: 9.30AM - 11.30AM', 'Biomedical Imaging', 'BME467'),
+(13, 'SAL Building Room 326', 'F, F: 12.30PM - 2.30PM', 'Neuroengineering', 'BME503'),
+(5, 'XYZ Building Room 202', 'M, M: 11.30AM - 12.45PM', 'Linear Algebra', 'EE382'),
+(5, 'XYZ Building Room 202', 'M, M: 11.30AM - 12.45PM', 'Introduction to Computer Networks', 'EE467');
 
 -- --------------------------------------------------------
 
@@ -89,15 +115,15 @@ CREATE TABLE IF NOT EXISTS `student_courses` (
 --
 
 INSERT INTO `student_courses` (`user_id`, `faculty_id`, `course_id`, `semester`, `grade_type`, `grade`) VALUES
-(3, 5, 'CS402', 'Fall 2012', 'letter grade', 'A-'),
-(2, 6, 'EE450', 'Fall 2012', 'letter grade', 'B+'),
-(3, 6, 'EE450', 'Spring 2013', NULL, NULL),
-(44, 0, 'CSCI 101L', '', NULL, NULL),
-(44, 0, 'CSCI 570', '', NULL, NULL),
-(2, 5, 'CS402', 'Spring 2013', NULL, NULL),
-(44, 6, 'EE450', 'Spring 2013', NULL, NULL),
-(4, 6, 'EE450', 'Spring 2013', NULL, NULL),
-(44, 5, 'CS402', 'Spring 2013', NULL, NULL);
+(3, 5, 'CS265', 'Fall 2012', 'letter grade', 'A-'),
+(2, 6, 'EE382', 'Fall 2012', 'letter grade', 'B+'),
+(3, 6, 'EE382', 'Spring 2013', NULL, NULL),
+(14, 0, 'CS467', '', NULL, NULL),
+(14, 0, 'CSC503', '', NULL, NULL),
+(2, 5, 'CS265', 'Spring 2013', NULL, NULL),
+(14, 6, 'EE467', 'Spring 2013', NULL, NULL),
+(4, 6, 'EE382', 'Spring 2013', NULL, NULL),
+(14, 5, 'CS265', 'Spring 2013', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -122,8 +148,8 @@ CREATE TABLE IF NOT EXISTS `student_info` (
 INSERT INTO `student_info` (`user_id`, `degree`, `major`, `gpa`, `credits_earned`, `credits_required_for_degree`) VALUES
 (1, 'MS', 'CS', 3.50, 9, 27),
 (2, 'MS', 'EE', 3.20, 8, 27),
-(3, 'BS', 'CS', 3.60, 20, 52),
-(44, 'MS', 'CS', 0.00, 0, 27);
+(3, 'BS', 'BME', 3.60, 20, 52),
+(14, 'MS', 'CS', 0.00, 0, 27);
 
 -- --------------------------------------------------------
 
@@ -152,11 +178,18 @@ CREATE TABLE IF NOT EXISTS `user_info` (
 INSERT INTO `user_info` (`user_id`, `user_type`, `first_name`, `middle_name`, `last_name`, `user_email`, `alternate_email`, `address`, `phone_no`, `password`) VALUES
 (1, 'admin', 'Admin', '', 'USC', 'admin@usc.edu', '', 'Student Union, USC', '1233214123', 'admin'),
 (2, 'student', 'Abhinav', '', 'Mishra', 'abhi@usc.edu', 'abhi@yahoo.com', '1756 Scott St, LAKE CITY,FL 32056', '2132132132', 'abhinav'),
-(3, 'student', 'Abhishek', 'Ratan', 'Tiwari', 'shek@usc.edu', 'abhishk@gmail.com', ' 1549 Alameda Ave, Adak,AK 99546', '3123123123', 'abhishek'),
-(4, 'student', 'Aldrich', '', 'Stibel', 'ald@usc.edu', 'ald@gmail.com', ' 736 Bush St,VERNON HILLS,IL 60061', '3233233232', 'aldrich'),
-(5, 'professor', 'Dennis', 'John', 'Lillee', 'dennis@usc.edu', 'dennis@yahoo.com', ' 70 Golden Gate Ave, SAN FRANCISCO, CA 94102', '4124124124', 'dennis'),
-(6, 'professor', 'Davy', '', 'Hudson', 'davy@usc.edu', '', ' 1426 Guerrero St, NEW YORK ,NY 10010', '8128128123', 'davy'),
-(44, 'student', 'Yumin', '', 'Gong', 'yumin@usc.edu', '', '56th test street', '111-111-1111', '111111');
+(3, 'student', 'Abhishek', 'Ratan', 'Tiwari', 'shek@usc.edu', 'abhishk@gmail.com', '1549 Alameda Ave, Adak,AK 99546', '3123123123', 'abhishek'),
+(4, 'student', 'Aldrich', '', 'Stibel', 'ald@usc.edu', 'ald@gmail.com', '736 Bush St,VERNON HILLS,IL 60061', '3233233232', 'aldrich'),
+(5, 'professor', 'Dennis', 'John', 'Lillee', 'dennis@usc.edu', 'dennis@yahoo.com', '70 Golden Gate Ave, SAN FRANCISCO, CA 94102', '4124124124', 'dennis'),
+(6, 'professor', 'Davy', '', 'Hudson', 'davy@usc.edu', '', '1426 Guerrero St, NEW YORK ,NY 10010', '8128128123', 'davy'),
+(7, 'professor', 'Tim', '', 'Johnson', 'tjohnson@usc.edu', '', '1555 Travis St, Columbus ,OH 10355', '6166165665', 'tjohnson'),
+(8, 'professor', 'Bob', '', 'Forman', 'bforman@usc.edu', '', '159 45th St, San Jose ,CA 96610', '8126788123', 'bforman'),
+(9, 'professor', 'Glenn', '', 'Hyde', 'ghyde@usc.edu', '', '1212 Jefferson St, San Antonio ,CA 98765', '4567456373', 'ghyde'),
+(10, 'professor', 'Donna', '', 'Rickson', 'donrick@usc.edu', '', '156 Boardwalk, Santa Cruz ,CA 66679', '5679990343', 'donrick'),
+(11, 'professor', 'Steve', '', 'Simpson', 'simpson@usc.edu', '', '665 Matena Way, Rodeo Drive ,TX 52223', '5677452111', 'simpson'),
+(12, 'professor', 'Ali', '', 'Fezowsky', 'alif@usc.edu', '', '200 Zanker Way, Tuscan ,AZ 77653', '6221123344', 'alif'),
+(13, 'professor', 'Brad', '', 'Womack', 'womack@usc.edu', '', '3345 University Ave, Los Angeles ,CA 90819', '1115554343', 'womack'),
+(14, 'student', 'Yumin', '', 'Gong', 'yumin@usc.edu', '', '56th test street', '1111111111', '111111');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
