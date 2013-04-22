@@ -9,6 +9,41 @@ session_start();
 <script src="jquery-1.7.1.min.js"></script>
 <script src = "toggle.js"></script>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<script> 
+$(document).ready(function(){
+
+    $("#filter").keyup(function(){
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+ 
+        // Loop through the comment list
+        $(".flip").each(function(){
+ 
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+ 
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+ 
+        // Update the count
+        var numberItems = count;
+        $("#filter-count").text("Number of Comments = "+count);
+    });
+
+  $(".flip").click(function(){
+    $(this).next(".panel").slideToggle("slow");
+  });
+});
+</script>
 <script>
 function deleteMe(u)
 {
