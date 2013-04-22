@@ -49,9 +49,12 @@ else{
     <div class="middleContainer" >
         <div class="middle student_info">
             <div class="text">
+			<span style="display:inline-block;margin-right:500px;">
                 <?php
                 echo "<h4>Welcome ".$_SESSION['first_name']." ".$_SESSION['last_name'] ."! </h4>";
                 ?>
+			</span>
+				<button style="display:inline-block;font-weight:bold;cursor:pointer" onclick = "printContent('printableInfo','main2.css')"/>Print</button>
 				<div id = "printableInfo">
                 <div class="subHeading">Personal Information</div>
                 <div class="row">
@@ -101,7 +104,7 @@ else{
                     </div>
                 </div>
 				</div>
-				<a href="index.php"><input type="image" style="float:left; height:30px" src="images/print.png" onclick = "printContent('printableInfo','main2.css')"/></a>
+				
                     <div class="edit">
                         <a href="editInfo.php">To change personal information please click here</a>
                     </div>

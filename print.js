@@ -1,6 +1,6 @@
 function printContent(id,css){
 	str=document.getElementById(id).innerHTML
-	newwin=window.open('','printwin','left=100,top=100,width=400,height=400')
+	newwin=window.open('','printwin','width=800,height=600,scrollbars=yes,resizable=no,toolbar=no,menubar=no,location=no,status=1')
 	newwin.document.write('<HTML>\n<HEAD>\n')
 	newwin.document.write('<TITLE>Print Page</TITLE>\n')
 	newwin.document.write('<script>\n')

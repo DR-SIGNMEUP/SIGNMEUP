@@ -18,6 +18,26 @@ function deleteMe(u)
 </script>
 <script> 
 $(document).ready(function(){
+	$("#filter").keyup(function(){
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+ 
+        // Loop through the comment list
+        $(".flip").each(function(){
+ 
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+ 
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+ 
+    });
   $(".flip").click(function(){
     $(this).next(".panel").slideToggle("slow");
   });
@@ -50,7 +70,13 @@ font-size:15px;
     </div>
 	 <div class="wrapper">
 		<div class="leftAndRight">
-		<h1>List of students:</h1>
+		<h1 style="display:inline-block;margin-right:150px;">List of students:</h1>
+		<span style="display:inline-block;">
+			<form id="live-search" action="" class="styled" method="post">
+				<span style="font-weight: bold;">Search :</span> 
+				<input type="text" class="text-input" id="filter" value="" />
+			</form>
+		</span>
 		<?php
 			include("dbConnection.php");
 			session_start();
