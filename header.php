@@ -31,7 +31,8 @@
         ?> style="margin-left:0px;">
     <img id="HeaderLogo" src="images/SMU4ColorLogo.png" alt="SignMeUp">
 </a>
-<?php if(!empty($_SESSION['user_id'])){ ?>
+<?php
+if(!empty($_SESSION['user_id'])){ ?>
     <span class="header_right">
             <span style="margin-right: 20px"><?php echo CURRENT_SEM; ?></span>
             <span class="user_id">

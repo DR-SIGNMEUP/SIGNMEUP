@@ -1,10 +1,15 @@
+<?php
+include("dbConnection.php");
+session_start();
+?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="main2.css">
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-</script>
+<script src="jquery-1.7.1.min.js"></script>
+<script src = "toggle.js"></script>
+
 <script>
 function deleteMe(u)
 {
@@ -16,14 +21,7 @@ function deleteMe(u)
    e.preventDefault();
 }
 </script>
-<script> 
-$(document).ready(function(){
-  $(".flip").click(function(){
-    $(this).next(".panel").slideToggle("slow");
-  });
-});
-</script>
- 
+
 <style type="text/css"> 
 .panel,.flip
 {
@@ -44,16 +42,14 @@ font-size:15px;
 </style>
 </head>
 <body>
-<div id="container">
-     <div class="grey_box">
+<div id="containerNew">
+     <div class="header">
         <?php include("header.php"); ?>
     </div>
-	 <div class="wrapper">
-		<div class="leftAndRight">
+	 <div class="middleContainer">
+		<div class="middle">
 		<h1>List of students:</h1>
 		<?php
-			include("dbConnection.php");
-			session_start();
 			$sql = "SELECT * FROM user_info WHERE user_type='student'";
 			$result = mysql_query($sql);
 
@@ -88,13 +84,15 @@ font-size:15px;
 		?>
 	</div>
 	</div>
-</div>	
 
     <div class="footer">
         <center>
             &copy; Team_6 SignMeUp
         </center>
     </div>
+</div>	
+
+
 
 </body>
 </html>

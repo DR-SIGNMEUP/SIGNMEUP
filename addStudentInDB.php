@@ -14,7 +14,7 @@ if(!$result){
     exit;
 }
 else{
-    header ("Location: studentsEnrolled.php?facultyid=".$faculty_id."&courseid=".$course_id);
+    header ("Location: studentsEnrolled.php?selectCourse=1&facultyid=".$faculty_id."&courseid=".$course_id);
 }
 
 ?>

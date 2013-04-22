@@ -23,7 +23,7 @@ body{
     background:url('images/grey_overlay.png') repeat;
     padding:10px 15px 15px 15px;
     color:#000;
-    margin: 0px 200px 0px 200px;
+    margin: 20px 200px 0px 200px;
 
 }
 
@@ -35,36 +35,39 @@ body{
     color:#000;
     margin: 10px 200px 0px 200px;
     opacity: 0.9;
+    height:500px;
 }
 
 .left
 {
     position:relative;
     padding:10px 0px 460px 15px;
-/*color:#000; */
-margin: 10px 360px 10px 10px;
-/* background-color:#8C898B; */
-opacity: 1;
-width:549px;
-height:470px;
-    }
+    /*color:#000; */
+    margin: 14px 360px 10px 0;
+    /* background-color:#8C898B; */
+    opacity: 1;
+    width:549px;
+    height:470px;
+}
 
 
 .right
 {
     padding:10px 0px 290px 15px;
     color:#000;
-    margin: -470px 0px 10px 570px;
+    margin: -480px 0px 10px 565px;
     background-color:#8C898B;
     opacity: 0.7;
     font-size:20px;
+    height:171px;
+    width:338px;
 }
 
 .wrapper{
     background:url('images/grey_overlay.png') repeat;
     width : 950px;
     min-height : 550px;
-    margin: 5px auto;
+    margin: 10px auto;
     position : relative;
 }
 
@@ -111,13 +114,14 @@ form input[type="submit"]{
     padding:0px 15px 0px 15px;
     color:#000;
     margin: 7px 200px 0px 200px;
-/* background-color:#FFF; */
-opacity: 0.9;
-    }
+    /* background-color:#FFF; */
+    opacity: 0.9;
+}
 
 .header_content
 {
-    width:690px;
+    /* width:690px; */
+    width : 420px;
     float:right;
     color:#7f7f7f;
     font-size:11px;

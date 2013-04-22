@@ -121,10 +121,10 @@ return valid;
                         <div class="main_navigation">
                             <ul>
                                 <li><a href="index.php">HOME</a></li>
-                                <li><a href="#">ABOUT US</a></li>
-                                <li><a href="signmeup.php">SIGNUP</a></li>
-                                <li><a href="#">CONTACT US</a></li>
+                                <!--<li><a href="#">ABOUT US</a></li>-->
                                 <li><a href="index.php">LOGIN</a></li>
+                                <li><a href="signmeup.php">SIGNUP</a></li>
+                                <!--<li><a href="#">CONTACT US</a></li>-->
                             </ul>
 						</div>
                     </div>

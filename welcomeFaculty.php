@@ -11,17 +11,37 @@ if(!$result){
     exit;
 }
 else{
-    $row = mysql_fetch_assoc($result);
+   /* $row = mysql_fetch_assoc($result);
     $_SESSION['office_hours'] = $row['office_hours'];
     $_SESSION['office_location'] = $row['office_location'];
     $_SESSION['subject'] = $row['subject'];
     $_SESSION['course_id'] = $courseid = $row['course_id'];
     $_SESSION['class_location'] = $row['class_location'];
     $_SESSION['class_hours'] = $row['class_timings'];
+   */
+
+    $i=0;
+    $subject = array();
+    $courseid = array();
+    $class_location = array();
+    $class_hours = array();
+    while($row = mysql_fetch_array($result))
+    {
+        $_SESSION['office_hours'] = $row['office_hours'];
+        $_SESSION['office_location'] = $row['office_location'];
+        $subject[$i] = $row['subject'];
+        $courseid[$i] =  $row['course_id'];
+        $class_location[$i] = $row['class_location'];
+        $class_hours[$i] = $row['class_timings'];
+        $i++;
+    }
+
+    $_SESSION['subject'] = $subject;
+    $_SESSION['course_id'] = $courseid;
+    $_SESSION['class_location'] = $class_location;
+    $_SESSION['class_hours'] = $class_hours;
 }
-
 ?>
-
 
 <!DOCTYPE>
 <html>
@@ -43,63 +63,71 @@ else{
                 echo "<h4>Welcome Faculty Member - ".$_SESSION['first_name']." ".$_SESSION['last_name'] ."!  </h4>";
                 ?>
 				<div id = "printableInfo">
-                <div class="subHeading">Personal Information</div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">First Name: </div>
-                        <div class="value"><?php echo $_SESSION['first_name']?></div>
+                    <div class="subHeading">Personal Information</div>
+                    <div class="row">
+                        <div class="entry">
+                            <div class="key">First Name: </div>
+                            <div class="value"><?php echo $_SESSION['first_name']?></div>
+                        </div>
+                        <div class="entry">
+                            <div class="key">Last Name: </div>
+                            <div class="value"><?php echo $_SESSION['last_name']?></div>
+                        </div>
                     </div>
-                    <div class="entry">
-                        <div class="key">Last Name: </div>
-                        <div class="value"><?php echo $_SESSION['last_name']?></div>
+                    <div class="row">
+                        <div class="entry">
+                            <div class="key">Address: </div>
+                            <div class="value"><?php echo $_SESSION['address']?></div>
+                        </div>
+                        <div class="entry">
+                            <div class="key">Faculty ID: </div>
+                            <div class="value"><?php echo $_SESSION['user_id']?></div>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="entry" id="addressEntry">
-                        <div class="key">Address: </div>
-                        <div class="value"><?php echo $_SESSION['address']?></div>
+                    <div class="row">
+                        <div class="entry">
+                            <div class="key">Phone: </div>
+                            <div class="value"><?php echo $_SESSION['phone_no']?></div>
+                        </div>
+                        <div class="entry">
+                            <div class="key">Email: </div>
+                            <div class="value"><?php echo $_SESSION['user_email']?></div>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">Phone: </div>
-                        <div class="value"><?php echo $_SESSION['phone_no']?></div>
+
+                    <div class="row">
+                        <div class="entry">
+                            <div class="key">Office Location: </div>
+                            <div class="value"><?php echo $_SESSION['office_location']?></div>
+                        </div>
+                        <div class="entry">
+                            <div class="key">Office Hours: </div>
+                            <div class="value"><?php echo $_SESSION['office_hours']; ?></div>
+                        </div>
                     </div>
-                    <div class="entry">
-                        <div class="key">Email: </div>
-                        <div class="value"><?php echo $_SESSION['user_email']?></div>
+
+
+                    <div class="classesThisSem">
+                        <?php
+                            if(count($subject) == 1){
+                                echo "Class taking this semester :";
+                            }
+                            else{
+                                echo "Classes taking this semester :";
+                            }
+                        ?>
+
+                        <table border="1" style="margin-top: 10px;">
+                            <tr><th style="width:100px">Course Id</th><th>Course Name</th><th>Class Location</th><th>Class Hours</th></tr>
+                            <?php
+                                for($j=0; $j<count($subject); $j++){
+                                    echo "<tr style='text-align:center; padding-left : 5px'><td>".$courseid[$j]."</td><td>".$subject[$j]."</td><td>".$class_location[$j]."</td><td>".$class_hours[$j]."</td></tr>";
+                                }
+                            ?>
+                        </table>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">Faculty ID: </div>
-                        <div class="value"><?php echo $_SESSION['user_id']?></div>
-                    </div>
-                    <div class="entry">
-                        <div class="key">Teaching Course: </div>
-                        <div class="value"><?php echo $_SESSION['subject']." (".$_SESSION['course_id'].")"; ?></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">Office Location: </div>
-                        <div class="value"><?php echo $_SESSION['office_location']?></div>
-                    </div>
-                    <div class="entry">
-                        <div class="key">Office Hours: </div>
-                        <div class="value"><?php echo $_SESSION['office_hours']; ?></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="entry">
-                        <div class="key">Class Location: </div>
-                        <div class="value"><?php echo $_SESSION['class_location']?></div>
-                    </div>
-                    <div class="entry">
-                        <div class="key">Class Hours: </div>
-                        <div class="value"><?php echo $_SESSION['class_hours']; ?></div>
-                    </div>
-                </div>
+                    <br/>
+
 				</div>
 				<a href="index.php"><input type="image" style="float:left; height:30px" src="images/print.png" onclick = "printContent('printableInfo','main2.css')"/></a>
                     <div class="edit">
@@ -115,9 +143,9 @@ else{
 
             <div class="tabs">
                 <ul id="menu">
-                    <li><a class="selected" href="studentsEnrolled.php?facultyid=<?php echo $id;?>&courseid=<?php echo $courseid; ?>">View Students Enrolled</a></li>
-                    <li><a href="addStudent.php?facultyid=<?php echo $id;?>&courseid=<?php echo $courseid; ?>">Add Student</a></li>
-                    <li><a href="facultyInfo.php">View Faculty Information</a></li>
+                    <li><a class="selected" href="studentsEnrolled.php?facultyid=<?php echo $id;?>">View Students Enrolled</a></li>
+                    <li><a href="addStudent.php?facultyid=<?php echo $id;?>">Add Student</a></li>
+                    <li><a href="faculty_info.php">View Faculty Information</a></li>
                 </ul>
             </div>
         </div>

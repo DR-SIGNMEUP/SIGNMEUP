@@ -1,7 +1,6 @@
 <?php
 include("dbConnection.php");
 session_start();
-$courseid = $_GET['courseid'];
 $facultyid = $_GET['facultyid'];
 ?>
 
@@ -14,7 +13,11 @@ $facultyid = $_GET['facultyid'];
 <body>
 <div id="containerNew" >
     <div class="header">
-        <?php include("header.php"); ?>
+        <?php include("header.php");
+        $subject = $_SESSION['subject'];
+        $course_id = $_SESSION['course_id'];
+        ?>
+
     </div>
 
     <div class="middleContainer" id="facultyMiddleContainer2" >
@@ -23,11 +26,21 @@ $facultyid = $_GET['facultyid'];
                 <?php
                 echo "<h4>Welcome Faculty Member - ".$_SESSION['first_name']." ".$_SESSION['last_name'] ."!  </h4>";
                 ?>
-                <h5>Please enter the following information to add a student to your class - <?php echo $courseid;?></h5>
+                <h5>Please fill in the information below: </h5>
                 <form action="addStudentInDB.php" method="GET">
-                    <label> UserID :</label> <input type="text" name="userid" id="userid" placeholder="User ID (Numeric value)"> <br/>    <br/>
+                    <label> Class :</label>
+                    <select name="courseid">
+                        <?php
+                           for($j=0; $j<count($_SESSION['subject']); $j++){
+                                echo "<option value='".$course_id[$j]."'>".$subject[$j]." (".$course_id[$j].")</option>"  ;
+                           }
+                        ?>
+                    </select>
+                    <br/><br/>
+                    <label> UserID :</label>
+                    <input type="text" name="userid" id="userid" placeholder="User ID (Numeric value)">
+                    <br/><br/>
                     <input type="submit" name="submit" value = "Submit" id="submit">
-                    <input type="hidden" name="courseid" value = "<?php echo $courseid;?>">
                     <input type="hidden" name="facultyid" value = "<?php echo $facultyid;?>">
                 </form>
             </div>

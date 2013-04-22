@@ -2,6 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="main2.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
     <style>
         .ui-tooltip, .arrow:after {
@@ -94,12 +95,13 @@
 
         function validate(){
             var fields = document.SignUpForm;
-
+           /*
             if(fields.studentID.value == ""){
                 alert("Student ID cannot be left blank");
                 fields.studentID.focus();
                 return false;
             }
+            */
             if(fields.firstname.value == ""){
                 alert("First Name cannot be left blank");
                 fields.firstname.focus();
@@ -188,100 +190,101 @@
                     </a>
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper" style="min-height: 572px">
 	<div class="leftAndRight">
 			<form action="insert.php" method="post" name="SignUpForm" id="signupForm" >
 			<table border="0" align="center">
 				<tr><td colspan=2 align=center style="font-size:28px;"><b>User Information</b></td></tr>
-				<tr bordercolor=black>
-				<td>Student ID*: </td>
-				<td><input type="text" name="studentID" title="Please enter your unique student id"></td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>First Name*:</td>
-				<td><input type="text" name="firstname" title="Enter your First name">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Middle Name:</td>
-				<td><input type="text" name="middlename" title="Enter your middle name">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Last Name*:</td>
-				<td><input type="text" name="lastname" title="Enter your last name">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Email*:</td>
-				<td><input type="text" name="email" title="Enter your email adddress">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Alternate Email:</td>
-				<td><input type="text" name="altEmail" title="Enter your alternate email address">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Address*:</td>
-				<td><input type="text" name="address" title="Enter your address">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Degree*:</td>
-				<td><p>
-				<select name="degree" title="Please select your degree objective">
-				  <option value="">Select...</option>
-				  <option value="BS">Bachelor's</option>
-				  <option value="MS">Master's</option>
-				  <option value="PHD">PhD</option>
-				</select>
-				</p>  </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Major*:</td>
-				<td><p>
-				<select name="major" title="Please select your major">
-				  <option value="">Select...</option>
-				  <option value="CS">Computer Science</option>
-				  <option value="EE">Electrical Engineering</option>
-				  <option value="BME">Biomedical Engineering</option>
-				  <option value="ENV">Environmental Engineering</option>
-				</select>
-				</p></td>
-				</tr>
-				
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Phone Number:</td>
-				<td><input type="text" name="phone" title="Enter your phone number XXX-XXX-XXXX">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td>Password*:</td>
-				<td><input type="PASSWORD" name="password" title="Enter your password. Atleast 6 characters in length">     </td>
-				</tr>
-				<TR></TR><TR></TR>
-                <tr bordercolor=black>
-                    <td>Confirm Password*:</td>
-                    <td><input type="PASSWORD" name="confirmpassword" title="Please confirm your password">     </td>
-                </tr>
-                <TR></TR><TR></TR>
-				<tr bordercolor=black>
-				<td></td>
-				<td ><input name="submit" type="Submit" id="submit" value="Submit" class="button"></td>
-				</tr>
-				<TR></TR><TR></TR>
-			</table>
-			</form>
-		</div>
-	</div>	
+                <!--<tr bordercolor=black>
+                    <td>Student ID*: </td>
+                    <td><input type="text" name="studentID" title="Please enter your unique student id"></td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    -->
+                    <tr bordercolor=black>
+                    <td>First Name*:</td>
+                    <td><input type="text" name="firstname" title="Enter your First name">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Middle Name:</td>
+                    <td><input type="text" name="middlename" title="Enter your middle name">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Last Name*:</td>
+                    <td><input type="text" name="lastname" title="Enter your last name">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Email*:</td>
+                    <td><input type="text" name="email" title="Enter your email adddress">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Alternate Email:</td>
+                    <td><input type="text" name="altEmail" title="Enter your alternate email address">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Address*:</td>
+                    <td><input type="text" name="address" title="Enter your address">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Degree*:</td>
+                    <td><p>
+                    <select name="degree" title="Please select your degree objective">
+                      <option value="">Select...</option>
+                      <option value="BS">Bachelor's</option>
+                      <option value="MS">Master's</option>
+                      <option value="PHD">PhD</option>
+                    </select>
+                    </p>  </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Major*:</td>
+                    <td><p>
+                    <select name="major" title="Please select your major">
+                      <option value="">Select...</option>
+                      <option value="CS">Computer Science</option>
+                      <option value="EE">Electrical Engineering</option>
+                      <option value="BME">Biomedical Engineering</option>
+                      <option value="ENV">Environmental Engineering</option>
+                    </select>
+                    </p></td>
+                    </tr>
 
-    <div class="footer">
-        <center>
-            &copy; Team_6 SignMeUp
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Phone Number:</td>
+                    <td><input type="text" name="phone" title="Enter your phone number XXX-XXX-XXXX">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Password*:</td>
+                    <td><input type="PASSWORD" name="password" title="Enter your password. Atleast 6 characters in length">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                        <td>Confirm Password*:</td>
+                        <td><input type="PASSWORD" name="confirmpassword" title="Please confirm your password">     </td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td></td>
+                    <td ><input name="submit" type="Submit" id="submit" value="Submit" class="button" style="margin-left: 0px"></td>
+                    </tr>
+                    <TR></TR><TR></TR>
+                </table>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <center>
+                &copy; Team_6 SignMeUp
         </center>
     </div>
     </div>

@@ -1,13 +1,13 @@
 <?php
+include("dbConnection.php");
 session_start();
 ?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="main.css">
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-</script>
+<link rel="stylesheet" type="text/css" href="main2.css">
+<script src="jquery-1.7.1.min.js"></script>
+<script src = "toggle.js"></script>
 <script>
 function aa(u)
 {
@@ -16,14 +16,7 @@ function aa(u)
 }
 
 </script>
-<script> 
-$(document).ready(function(){
-  $(".flip").click(function(){
-    $(this).next(".panel").slideToggle("slow");
-  });
-});
-</script>
- 
+
 <style type="text/css"> 
 .panel,.flip
 {
@@ -45,13 +38,13 @@ font-size:15px;
 
 </head>
 <body>
-<div id="container">
-    <div class="grey_box">
+<div id="containerNew">
+    <div class="header">
         <?php include("header.php"); ?>
     </div>
 
-    <div class="wrapper">
-		<div class="leftAndRight">
+    <div class="middleContainer">
+		<div class="middle">
 		<h1>Computer Science (CSCI) </h1>
 				<div class="flip">CSCI 101L: Fundamentals of Computer Programming
 				<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('CSCI 101L')"/></a>

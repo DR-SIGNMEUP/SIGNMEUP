@@ -117,7 +117,7 @@ else{
             <div class="tabs">
                 <ul id="menu">
                     <li><a class="selected" href="grades.php">View Grades</a></li>
-                    <li><a href="admin_faculty.php">View Faculty Information</a></li>
+                    <li><a href="faculty_info.php">View Faculty Information</a></li>
                     <li><a href="courseRequirements.php">Course Requirements</a></li>
                     <li><a href="courseRegistration.php">Course Registration</a></li>
                 </ul>

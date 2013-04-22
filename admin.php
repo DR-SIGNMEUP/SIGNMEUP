@@ -92,7 +92,7 @@ else{
             <div class="tabs">
                 <ul id="menu">
                     <li><a class="selected" href="admin_students.php">Student Information</a></li>
-                    <li><a href="admin_faculty.php">Faculty Information</a></li>
+                    <li><a href="faculty_info.php">Faculty Information</a></li>
                 </ul>
             </div>
         </div>

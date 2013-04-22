@@ -18,17 +18,17 @@ body{
 .header
 {
     background:url('images/grey_overlay.png') repeat;
-    padding:0px 15px 15px 15px;
+    padding:10px 15px 15px 15px;
     color:#000;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
 .middleContainer{
     background:url('images/grey_overlay.png') repeat;
     width : 100%;
-    height : 538px;
-    margin: 5px auto;
+    min-height : 566px;
+    margin: 10px auto;
     position : relative;
 }
 
@@ -46,7 +46,7 @@ body{
     padding-left: 10px;
     margin-top: -10px;
     width : 97.5%;
-    height : 280px;
+    height : 299px;
 }
 .subHeading{
     text-align: center;
@@ -56,7 +56,7 @@ body{
 
 .row{
     width : 100%;
-    height: 10%;
+    height: 35px;
     font-size: 13pt;
 }
 
@@ -87,7 +87,7 @@ body{
 }
 
 .tabbedPages{
-    top : 310px;
+    top : 335px;
     height : 200px;
 }
 
@@ -150,16 +150,16 @@ body{
 }
 
 #facultyText{
- height: 350px;
+ height: 385px;
 }
 
 #facultyTabbedPages{
-    top : 380px;
+    top : 445px;
     height : 155px;
 }
 
 #facultyMiddleContainer{
-    height : 564px;
+    height : 630px;
 }
 
 #facultyMiddleContainer2{
@@ -167,12 +167,12 @@ body{
 }
 
 .add_student_wrapper{
-    height: 497px;
+    height: 535px;
 }
 
 .list_of_students, .add_student{
     padding-left: 15px;
-    min-height: 507px;
+    min-height: 572px;
 }
 
 .mytable {
@@ -221,7 +221,7 @@ label{
 
 form{
     margin: 0 auto;
-    width : 400px;
+    width : 450px;
 }
 form input[type="submit"]{
     width : 100px;
@@ -231,8 +231,29 @@ form input[type="submit"]{
 }
 
 form input[type="text"]{
-    width: 250px;
+    width: 350px;
     height: 30px;
     padding: 5px;
 
+}
+
+.classesThisSem{
+    font-size: 12pt;
+    font-weight: 600;
+    padding: 5px;
+    width : 890px;
+}
+
+.classesThisSem table{
+    width : 885px;
+}
+
+form select{
+    height : 30px;
+    width : 350px;
+    padding:5px;
+}
+
+.msg{
+    margin-top: 40px;
 }
