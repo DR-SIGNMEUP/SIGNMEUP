@@ -257,3 +257,16 @@ form select{
 .msg{
     margin-top: 40px;
 }
+
+#adminText{
+    height : 300px;
+}
+
+#adminTabbedPages{
+    height:155px;
+    top:310px;
+}
+
+#adminMiddleContainer{
+    min-height:510px;
+}

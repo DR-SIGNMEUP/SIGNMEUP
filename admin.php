@@ -47,9 +47,9 @@ else{
         <?php include("header.php"); ?>
     </div>
 
-    <div class="middleContainer" id="facultyMiddleContainer" >
+    <div class="middleContainer" id="adminMiddleContainer" >
         <div class="middle student_info">
-            <div class="text" id="facultyText">
+            <div class="text" id="adminText">
 				<span style="display:inline-block;margin-right:650px;">
                 <?php
                 echo "<h4>Welcome Admin! </h4>";
@@ -86,7 +86,7 @@ else{
                 </div>
         </div>
 
-        <div class="tabbedPages" id="facultyTabbedPages">
+        <div class="tabbedPages" id="adminTabbedPages">
             <div class="text">
                 <h4>Useful Links</h4>
             </div>

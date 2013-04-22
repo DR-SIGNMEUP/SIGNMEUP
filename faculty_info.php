@@ -39,9 +39,7 @@ $(document).ready(function(){
         $("#filter-count").text("Number of Comments = "+count);
     });
 
-  $(".flip").click(function(){
-    $(this).next(".panel").slideToggle("slow");
-  });
+
 });
 </script>
 <script>
