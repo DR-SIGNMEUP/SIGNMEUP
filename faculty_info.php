@@ -81,7 +81,13 @@ font-size:15px;
 
 	<div class="middleContainer">
 		<div class="middle">
-		<h1>List of professors:</h1>
+		<h1 style="display:inline-block;margin-right:120px;">List of professors:</h1>
+		<span style="display:inline-block;">
+			<form id="live-search" action="" class="styled" method="post">
+				<span style="font-weight: bold;">Search :</span> 
+				<input type="text" class="text-input" id="filter" value="" />
+			</form>
+		</span>
 		<?php
 
 			
