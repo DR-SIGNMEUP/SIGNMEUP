@@ -192,15 +192,9 @@
 
     <div class="wrapper" style="min-height: 572px">
 	<div class="leftAndRight">
-			<form action="insert.php" method="post" name="SignUpForm" id="signupForm" >
+			<form action="admin_insert_faculty.php" method="post" name="SignUpForm" id="signupForm" >
 			<table border="0" align="center">
-				<tr><td colspan=2 align=center style="font-size:28px;"><b>User Information</b></td></tr>
-                <!--<tr bordercolor=black>
-                    <td>Student ID*: </td>
-                    <td><input type="text" name="studentID" title="Please enter your unique student id"></td>
-                    </tr>
-                    <TR></TR><TR></TR>
-                    -->
+				<tr><td colspan=2 align=center style="font-size:28px;"><b>Faculty Information</b></td></tr>
                     <tr bordercolor=black>
                     <td>First Name*:</td>
                     <td><input type="text" name="firstname" title="Enter your First name">     </td>
@@ -232,29 +226,51 @@
                     </tr>
                     <TR></TR><TR></TR>
                     <tr bordercolor=black>
-                    <td>Degree*:</td>
+                    <td>Subject*:</td>
                     <td><p>
-                    <select name="degree" title="Please select your degree objective">
+                    <select name="subject" title="Please select the subject">
                       <option value="">Select...</option>
-                      <option value="BS">Bachelor's</option>
-                      <option value="MS">Master's</option>
-                      <option value="PHD">PhD</option>
+                      <option value="EE101">EE101:Computer Organization and Architecture</option>
+					  <option value="EE265">EE265:Introduction to Digital Logic</option>
+					  <option value="EE382">EE382:Linear Algebra</option>
+					  <option value="EE467">EE467:Introduction to Computer Networks</option>
+					  <option value="EE503">EE503:VLSI Design</option>
+					  <option value="CS101">CS101:Fundamentals of Computer Programming</option>
+					  <option value="CS265">CS265:Object Oriented Programming</option>
+					  <option value="CS382">CS382:Operating Systems</option>
+					  <option value="CS467">CS467:Artificial Intelligence</option>
+					  <option value="CS503">CS503:Analysis of Algorithms</option>
+					  <option value="BME101">BME101:Biomedical Programming</option>
+					  <option value="BME265">BME265:Medical Electronics</option>
+					  <option value="BME382">BME382:Signals and Systems</option>
+					  <option value="BME467">BME467:Biomedical Imaging</option>
+					  <option value="BME503">BME503:Neuroengineering</option>
                     </select>
                     </p>  </td>
                     </tr>
                     <TR></TR><TR></TR>
                     <tr bordercolor=black>
-                    <td>Major*:</td>
+                    <td>Office Location*:</td>
                     <td><p>
-                    <select name="major" title="Please select your major">
+                    <select name="location" title="Please select your office location">
                       <option value="">Select...</option>
-                      <option value="CS">Computer Science</option>
-                      <option value="EE">Electrical Engineering</option>
-                      <option value="BME">Biomedical Engineering</option>
+                      <option value="ABC Building Room 101">ABC Building Room 101</option>
+                      <option value="CGH Building Room 444">CGH Building Room 444</option>
+                      <option value="RRT Building Room 221">RRT Building Room 221</option>
+					  <option value="OPH Building Room 609">OPH Building Room 609</option>
+					  <option value="FTY Building Room 134">FTY Building Room 134</option>
+					  <option value="ETR Building Room 455">ETR Building Room 455</option>
+					  <option value="MNJ Building Room 101">MNJ Building Room 101</option>
+					  <option value="SAL Building Room 326">SAL Building Room 326</option>
+					  <option value="XYZ Building Room 202">XYZ Building Room 202</option>
                     </select>
                     </p></td>
                     </tr>
-
+					<TR></TR><TR></TR>
+                    <tr bordercolor=black>
+                    <td>Office Hours:</td>
+                    <td><input type="text" name="hours" title="Enter office hours in format D,D: HH:MM AM/PM - HH:MM AM/PM">  </td>
+                    </tr>
                     <TR></TR><TR></TR>
                     <tr bordercolor=black>
                     <td>Phone Number:</td>

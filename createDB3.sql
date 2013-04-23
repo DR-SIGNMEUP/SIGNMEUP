@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `course_info` (
   `course_id` varchar(10) NOT NULL DEFAULT '',
   `course_name` varchar(50) NOT NULL,
-  `semester` varchar(10) NOT NULL,
+  `semester` varchar(20) NOT NULL,
   `class_location` varchar(20) DEFAULT NULL,
   `class_timings` varchar(50) DEFAULT NULL,
   `no_of_credits` int(10) DEFAULT NULL,
@@ -41,21 +41,21 @@ CREATE TABLE IF NOT EXISTS `course_info` (
 --
 
 INSERT INTO `course_info` (`course_id`, `course_name`, `semester`, `class_location`, `class_timings`, `no_of_credits`) VALUES
-('EE101', 'Computer Organization and Architecture', 'SPRING 201', 'OHE 102', 'T, Th: 7.30AM - 8.45AM', 3),
-('EE265', 'Introduction to Digital Logic', 'SPRING 201', 'OHE 166', 'T, F: 9.30AM - 10.45AM', 3),
-('EE382', 'Linear Algebra', 'SPRING 201', 'SAL 344', 'W, Th: 12.30PM - 1.45PM', 3),
-('EE467', 'Introduction to Computer Networks', 'SPRING 201', 'NOH 101', 'M, Th: 8.30AM - 9.45AM', 3),
-('EE503', 'VLSI Design', 'SPRING 201', 'PHU 607', 'T, W: 10.30AM - 11.45AM', 3),
-('CS101', 'Fundamentals of Computer Programming', 'SPRING 201', 'KLI 665', 'W, Th: 11.30AM - 12.45PM', 3),
-('CS265', 'Object Oriented Programming', 'SPRING 201', 'VJN 222', 'T, F: 9.30AM - 10.45AM', 3),
-('CS382', 'Operating Systems', 'SPRING 201', 'NOH 667', 'T, W: 7.30AM - 8.45AM', 3),
-('CS467', 'Artificial Intelligence', 'SPRING 201', 'VKC 503', 'T, Th: 5.30PM - 7.45PM', 3),
-('CS503', 'Analysis of Algorithms', 'SPRING 201', 'TTY 223', 'M, F: 3.30PM - 5.45PM', 3),
-('BME101', 'Biomedical Programming', 'SPRING 201', 'YTH 423', 'M, T: 7.30AM - 8.45AM', 3),
-('BME265', 'Medical Electronics', 'SPRING 201', 'DEX 223', 'W, Th: 9.30AM - 10.45AM', 3),
-('BME382', 'Signals and Systems', 'SPRING 201', 'DEX 578', 'T, Th: 4.30PM - 6.45PM', 3),
-('BME467', 'Biomedical Imaging', 'SPRING 201', 'VKC 405', 'T, F: 7.30AM - 8.45AM', 3),
-('BME503', 'Neuroengineering', 'SPRING 201', 'OHE 301', 'M, W: 9.30AM - 10.45AM', 3);
+('EE101', 'Computer Organization and Architecture', 'Spring 2013', 'OHE 102', 'T, Th: 7.30AM - 8.45AM', 3),
+('EE265', 'Introduction to Digital Logic', 'Spring 2013', 'OHE 166', 'T, F: 9.30AM - 10.45AM', 3),
+('EE382', 'Linear Algebra', 'Spring 2013', 'SAL 344', 'W, Th: 12.30PM - 1.45PM', 3),
+('EE467', 'Introduction to Computer Networks', 'Spring 2013', 'NOH 101', 'M, Th: 8.30AM - 9.45AM', 3),
+('EE503', 'VLSI Design', 'Spring 2013', 'PHU 607', 'T, W: 10.30AM - 11.45AM', 3),
+('CS101', 'Fundamentals of Computer Programming', 'Spring 2013', 'KLI 665', 'W, Th: 11.30AM - 12.45PM', 3),
+('CS265', 'Object Oriented Programming', 'Spring 2013', 'VJN 222', 'T, F: 9.30AM - 10.45AM', 3),
+('CS382', 'Operating Systems', 'Spring 2013', 'NOH 667', 'T, W: 7.30AM - 8.45AM', 3),
+('CS467', 'Artificial Intelligence', 'Spring 2013', 'VKC 503', 'T, Th: 5.30PM - 7.45PM', 3),
+('CS503', 'Analysis of Algorithms', 'Spring 2013', 'TTY 223', 'M, F: 3.30PM - 5.45PM', 3),
+('BME101', 'Biomedical Programming', 'Spring 2013', 'YTH 423', 'M, T: 7.30AM - 8.45AM', 3),
+('BME265', 'Medical Electronics', 'Spring 2013', 'DEX 223', 'W, Th: 9.30AM - 10.45AM', 3),
+('BME382', 'Signals and Systems', 'Spring 2013', 'DEX 578', 'T, Th: 4.30PM - 6.45PM', 3),
+('BME467', 'Biomedical Imaging', 'Spring 2013', 'VKC 405', 'T, F: 7.30AM - 8.45AM', 3),
+('BME503', 'Neuroengineering', 'Spring 2013', 'OHE 301', 'M, W: 9.30AM - 10.45AM', 3);
 
 -- --------------------------------------------------------
 
@@ -115,15 +115,18 @@ CREATE TABLE IF NOT EXISTS `student_courses` (
 --
 
 INSERT INTO `student_courses` (`user_id`, `faculty_id`, `course_id`, `semester`, `grade_type`, `grade`) VALUES
-(3, 5, 'CS265', 'Fall 2012', 'letter grade', 'A-'),
-(2, 6, 'EE382', 'Fall 2012', 'letter grade', 'B+'),
-(3, 6, 'EE382', 'Spring 2013', NULL, NULL),
-(14, 0, 'CS467', '', NULL, NULL),
-(14, 0, 'CSC503', '', NULL, NULL),
-(2, 5, 'CS265', 'Spring 2013', NULL, NULL),
-(14, 6, 'EE467', 'Spring 2013', NULL, NULL),
-(4, 6, 'EE382', 'Spring 2013', NULL, NULL),
-(14, 5, 'CS265', 'Spring 2013', NULL, NULL);
+(1, 6, 'EE101', 'Fall 2012', 'letter grade', 'A-'),
+(2, 6, 'EE101', 'Fall 2012', 'letter grade', 'B+'),
+(3, 5, 'EE382', 'Fall 2012', 'letter grade', 'A'),
+(14, 5, 'EE467', 'Fall 2012', 'letter grade', 'B'),
+(1, 8, 'CS265', 'Fall 2012', 'letter grade', 'B+'),
+(2, 8, 'CS265', 'Fall 2012', 'letter grade', 'A-'),
+(3, 9, 'CS467', 'Fall 2012', 'letter grade', 'A'),
+(14, 9, 'CS467', 'Fall 2012', 'letter grade', 'A-'),
+(1, 10, 'CS503', 'Fall 2012', 'letter grade', 'B'),
+(2, 10, 'CS503', 'Fall 2012', 'letter grade', 'B+'),
+(3, 11, 'BME265', 'Fall 2012', 'letter grade', 'A-'),
+(14, 11, 'BME265', 'Fall 2012', 'letter grade', 'A-');
 
 -- --------------------------------------------------------
 
@@ -146,10 +149,10 @@ CREATE TABLE IF NOT EXISTS `student_info` (
 --
 
 INSERT INTO `student_info` (`user_id`, `degree`, `major`, `gpa`, `credits_earned`, `credits_required_for_degree`) VALUES
-(1, 'MS', 'CS', 3.50, 9, 27),
-(2, 'MS', 'EE', 3.20, 8, 27),
-(3, 'BS', 'BME', 3.60, 20, 52),
-(14, 'MS', 'CS', 0.00, 0, 27);
+(1, 'MS', 'CS', 3.30, 9, 18),
+(2, 'MS', 'EE', 3.40, 9, 18),
+(3, 'BS', 'BME', 3.60, 9, 18),
+(14, 'MS', 'CS', 3.50, 9, 18);
 
 -- --------------------------------------------------------
 

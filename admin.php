@@ -95,6 +95,8 @@ else{
                 <ul id="menu">
                     <li><a class="selected" href="admin_students.php">Student Information</a></li>
                     <li><a href="faculty_info.php">Faculty Information</a></li>
+					<li><a href="admin_add_student.php">Add student</a></li>
+					<li><a href="admin_add_faculty.php">Add faculty</a></li>
                 </ul>
             </div>
         </div>

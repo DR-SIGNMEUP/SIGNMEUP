@@ -192,9 +192,9 @@
 
     <div class="wrapper" style="min-height: 572px">
 	<div class="leftAndRight">
-			<form action="insert.php" method="post" name="SignUpForm" id="signupForm" >
+			<form action="admin_insert_student.php" method="post" name="SignUpForm" id="signupForm" >
 			<table border="0" align="center">
-				<tr><td colspan=2 align=center style="font-size:28px;"><b>User Information</b></td></tr>
+				<tr><td colspan=2 align=center style="font-size:28px;"><b>Student Information</b></td></tr>
                 <!--<tr bordercolor=black>
                     <td>Student ID*: </td>
                     <td><input type="text" name="studentID" title="Please enter your unique student id"></td>
