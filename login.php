@@ -27,6 +27,7 @@ if(isset($_POST['emailid']) && isset($_POST['password'])) {
                 $_SESSION['alternate_email'] = $row['alternate_email'];
                 $_SESSION['address'] = $row['address'];
                 $_SESSION['phone_no'] = $row['phone_no'];
+                $_SESSION['password'] = $password;
 				
 				if($row['user_type'] == "admin")
 					header("Location: admin.php");
