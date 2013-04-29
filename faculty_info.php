@@ -91,7 +91,7 @@ font-size:15px;
 		<?php
 
 			
-			$sql = "SELECT * FROM user_info as a join professor_info as b on a.user_id=b.user_id WHERE user_type='professor'";
+			$sql = "SELECT * FROM user_info as a join professor_info as b on a.user_id=b.user_id WHERE user_type='professor' GROUP BY phone_no";
 			$result = mysql_query($sql);
 
 			if(!$result){
