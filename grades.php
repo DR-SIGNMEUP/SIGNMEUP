@@ -63,7 +63,8 @@ font-size:15px;
 					FROM student_info, student_courses, course_info
 					WHERE student_info.user_id = student_courses.user_id
 					AND student_courses.course_id = course_info.course_id 
-					AND student_info.user_id=".$_SESSION['user_id'];
+					AND student_info.user_id=".$_SESSION['user_id']." 
+					AND student_courses.grade IS NOT NULL AND student_courses.semester = 'Fall 2012'";
 			$result = mysql_query($sql);
 			if(!$result){
 				echo 'Could not run query: ' . mysql_error();
