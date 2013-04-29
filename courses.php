@@ -9,11 +9,15 @@ session_start();
     <script src="jquery-1.7.1.min.js"></script>
     <script src = "toggle.js"></script>
     <script>
-        function aa(u)
+        function add(cid,pid)
         {
-            alert("boooom");
-            var ddd=u;
-            window.location.href="welcome.php?Result=" +ddd;
+            var ddd=cid;			
+			var eee=pid;
+			var conf= confirm("Are you sure you want to add this course?");
+			if(conf){
+			   window.location.href="addCourse.php?courseID="+ddd+"&profMail="+eee;
+			}
+		    e.preventDefault();
         }
 
     </script>
@@ -67,15 +71,18 @@ session_start();
             }
 
             for($j=0; $j< count($info); $j++) {
-                echo '<div class="flip">'.$info[$j]["course_id"].': '. $info[$j]['course_name'];
-                echo '<a href="#"><input type="image" id="myimage" style="float:right; height:25px" src="images/add.png" onclick="aa('.$info[$j]["course_id"].')"/></a></div>';
-
+				$course_id = $info[$j]['course_id'];
+				$prof_email = $info[$j]["user_email"];
+                echo '<div class="flip">'.$course_id.': '. $info[$j]['course_name'];
+                echo "<a href='#'><input type='image' id='myimage' style='float:right; height:25px' src='images/add.png' onClick='add(\"".$course_id."\",\"".$prof_email."\")'/></a>";
+				echo '</div>';
                 echo '<div class="panel">  <table class="tablename" border="1"> <tr> <th>CourseID</th> <th>Semester</th> <th>Time</th>';
                 echo '<th>Location</th> <th>Credits</th> <th>Professor</th> <th>Office Hours</th> <th>Email Address</th> <th>Phone No.</th> </tr>';
                 echo '<tr> <td>'.$info[$j]["course_id"].'</td> <td>'.$info[$j]["semester"].'</td> <td>'.$info[$j]["class_timings"].'</td>';
                 echo '<td>'.$info[$j]["class_location"].'</td> <td>'.$info[$j]["no_of_credits"].'</td> <td>'.$info[$j]["first_name"].' '.$info[$j]["last_name"].'</td>';
                 echo '<td>'.$info[$j]["office_location"].' '.$info[$j]["office_hours"].'</td> <td>'.$info[$j]["user_email"].'</td> <td>'.$info[$j]["phone_no"].'</td></tr>';
                 echo '</table></div>';
+	
             }
         }
         ?>
